@@ -1,6 +1,23 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+## Material do curso
+
+  - Nosso livro **Ciência de Dados em R**: <https://livro.curso-r.com/>
+
+  - R for Data Science: <https://r4ds.had.co.nz/>
+
+  - Nosso blog: <https://curso-r.com/blog/>
+
+## Dúvidas
+
+Fora do horário de aula ou monitoria:
+
+  - perguntas gerais sobre o curso deverão ser feitas no Classroom.
+
+  - perguntas sobre R, principalmente as que envolverem código, deverão
+    ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
+
 ## Aula 1
 
 ### Conteúdo abordado
@@ -34,6 +51,8 @@
     R)](https://livro.curso-r.com/3-r-base.html)
 
 ### Referências
+
+<br> <br>
 
 ## Aula 2
 

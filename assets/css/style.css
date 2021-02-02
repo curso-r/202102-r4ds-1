@@ -199,6 +199,10 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+.toc {
+  margin-top: 20px;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
