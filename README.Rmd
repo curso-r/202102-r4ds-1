@@ -16,6 +16,23 @@ main_repo <- "main-r4ds-1"
 turma <- "202102-r4ds-1"
 ```
 
+
+```{r, include = FALSE, eval = FALSE}
+## Scripts usados em aula
+nome_pasta <- "scripts/"
+  tibble::tibble(
+    script = list.files(nome_pasta, pattern = ".R"),
+    link = paste0("https://curso-r.github.io/", turma, "/", nome_pasta, script)
+  )
+  
+## Slides
+tibble::tibble(
+  slide = CursoR:::list_github_files(main_repo, "slides/", "html"),
+  link = paste0("https://curso-r.github.io/", main_repo, "/", slide)
+) %>% 
+  dplyr::filter(!stringr::str_detect(slide, "_files/"))
+```
+
 ## Aula 1
 
 ### Conteúdo abordado
@@ -30,11 +47,21 @@ turma <- "202102-r4ds-1"
   - Funções e pacotes
   - tidyverse
   
+### Slides
+
+- [Introdução ao curso](https://curso-r.github.io/main-r4ds-1/slides/01-introducao-ao-curso.html)
+
+- [Introdução ao R](https://curso-r.github.io/main-r4ds-1/slides/02-introducao-ao-r.html)
+  
 ### Exercícios
 
 ### Leitura extra
 
-### Referência
+- [Capítulo 2 - RStudio (Ciência de Dados em R)](https://livro.curso-r.com/2-rstudio.html)
+
+- [Capítulo 3 - R básico (Ciência de Dados em R)](https://livro.curso-r.com/3-r-base.html)
+
+### Referências
 
 ## Aula 2
 
@@ -94,29 +121,4 @@ turma <- "202102-r4ds-1"
 - Relatórios em R Markdown
   - Introdução ao R Markdown
   - Construindo relatórios em HTML, PDF e Word
-
-## Slides
-
-```{r, echo = FALSE}
-knitr::kable(
-  tibble::tibble(
-    slide = CursoR:::list_github_files(main_repo, "slides/", "html"),
-    link = paste0("https://curso-r.github.io/", main_repo, "/", slide)
-  ) %>% 
-    dplyr::filter(!stringr::str_detect(slide, "_files/"))
-)
-```
-
-## Scripts usados em aula
-
-```{r, echo = FALSE}
-nome_pasta <- "R/"
-knitr::kable(
-  tibble::tibble(
-    script = list.files(nome_pasta, pattern = ".R"),
-    link = paste0("https://curso-r.github.io/", turma, "/", nome_pasta, script)
-  )
-)
-```
-
 
