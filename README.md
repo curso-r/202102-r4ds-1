@@ -52,8 +52,6 @@ Fora do horário de aula ou monitoria:
 
 ### Referências
 
-<br> <br>
-
 ## Aula 2
 
 ### Conteúdo abordado
@@ -66,12 +64,6 @@ Fora do horário de aula ou monitoria:
       - `select()`
       - `arrange()`
       - pipe `%>%`
-
-### Exercícios
-
-### Leitura extra
-
-### Referência
 
 ## Aula 3
 

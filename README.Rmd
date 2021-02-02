@@ -92,12 +92,7 @@ Fora do horário de aula ou monitoria:
   - `select()`
   - `arrange()`
   - pipe `%>%`
-  
-### Exercícios
 
-### Leitura extra
-
-### Referência
   
 ## Aula 3
 
