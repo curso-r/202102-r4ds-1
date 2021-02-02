@@ -78,59 +78,64 @@ Fora do horário de aula ou monitoria:
 
 - [Capítulo 3 - R básico (Ciência de Dados em R)](https://livro.curso-r.com/3-r-base.html)
 
-### Referências
+### Comentado na aula e extras
 
-## Aula 2
+- [Rladies](https://benubah.github.io/r-community-explorer/rladies.html)
 
-### Conteúdo abordado
+- [AI inclusive](https://www.ai-inclusive.org/)
 
-- Importação de arquivos
-  - arquivos de texto
-  - arquivos Excel
-- Exportação de arquivos
-- Manipulação de bases
-  - `select()`
-  - `arrange()`
-  - pipe `%>%`
 
-  
-## Aula 3
+<!-- ## Aula 2 -->
 
-### Conteúdo abordado
+<!-- ### Conteúdo abordado -->
 
-- Manipulação de bases
-  - `filter()`
-  - `mutate()`
+<!-- - Importação de arquivos -->
+<!--   - arquivos de texto -->
+<!--   - arquivos Excel -->
+<!-- - Exportação de arquivos -->
+<!-- - Manipulação de bases -->
+<!--   - `select()` -->
+<!--   - `arrange()` -->
+<!--   - pipe `%>%` -->
 
-## Aula 4
 
-### Conteúdo abordado
+<!-- ## Aula 3 -->
 
-- Manipulação de bases
-  - `group_by()` e `summarise()`
-  - juntando duas bases
+<!-- ### Conteúdo abordado -->
 
-## Aula 5
+<!-- - Manipulação de bases -->
+<!--   - `filter()` -->
+<!--   - `mutate()` -->
 
-### Conteúdo abordado
+<!-- ## Aula 4 -->
 
-- Gráficos
-  - Gráficos de pontos (dispersão)
-  - Gráficos de barras
+<!-- ### Conteúdo abordado -->
 
-## Aula 6
+<!-- - Manipulação de bases -->
+<!--   - `group_by()` e `summarise()` -->
+<!--   - juntando duas bases -->
 
-### Conteúdo abordado
+<!-- ## Aula 5 -->
 
-- Gráficos
-  - Boxplots e histogramas
-  - Customizando gráficos
+<!-- ### Conteúdo abordado -->
 
-## Aula 7
+<!-- - Gráficos -->
+<!--   - Gráficos de pontos (dispersão) -->
+<!--   - Gráficos de barras -->
 
-### Conteúdo abordado
+<!-- ## Aula 6 -->
 
-- Relatórios em R Markdown
-  - Introdução ao R Markdown
-  - Construindo relatórios em HTML, PDF e Word
+<!-- ### Conteúdo abordado -->
+
+<!-- - Gráficos -->
+<!--   - Boxplots e histogramas -->
+<!--   - Customizando gráficos -->
+
+<!-- ## Aula 7 -->
+
+<!-- ### Conteúdo abordado -->
+
+<!-- - Relatórios em R Markdown -->
+<!--   - Introdução ao R Markdown -->
+<!--   - Construindo relatórios em HTML, PDF e Word -->
 

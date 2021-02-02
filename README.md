@@ -50,57 +50,78 @@ Fora do horário de aula ou monitoria:
   - [Capítulo 3 - R básico (Ciência de Dados em
     R)](https://livro.curso-r.com/3-r-base.html)
 
-### Referências
+### Comentado na aula e extras
 
-## Aula 2
+  - [Rladies](https://benubah.github.io/r-community-explorer/rladies.html)
 
-### Conteúdo abordado
+  - [AI inclusive](https://www.ai-inclusive.org/)
 
-  - Importação de arquivos
-      - arquivos de texto
-      - arquivos Excel
-  - Exportação de arquivos
-  - Manipulação de bases
-      - `select()`
-      - `arrange()`
-      - pipe `%>%`
+<!-- ## Aula 2 -->
 
-## Aula 3
+<!-- ### Conteúdo abordado -->
 
-### Conteúdo abordado
+<!-- - Importação de arquivos -->
 
-  - Manipulação de bases
-      - `filter()`
-      - `mutate()`
+<!--   - arquivos de texto -->
 
-## Aula 4
+<!--   - arquivos Excel -->
 
-### Conteúdo abordado
+<!-- - Exportação de arquivos -->
 
-  - Manipulação de bases
-      - `group_by()` e `summarise()`
-      - juntando duas bases
+<!-- - Manipulação de bases -->
 
-## Aula 5
+<!--   - `select()` -->
 
-### Conteúdo abordado
+<!--   - `arrange()` -->
 
-  - Gráficos
-      - Gráficos de pontos (dispersão)
-      - Gráficos de barras
+<!--   - pipe `%>%` -->
 
-## Aula 6
+<!-- ## Aula 3 -->
 
-### Conteúdo abordado
+<!-- ### Conteúdo abordado -->
 
-  - Gráficos
-      - Boxplots e histogramas
-      - Customizando gráficos
+<!-- - Manipulação de bases -->
 
-## Aula 7
+<!--   - `filter()` -->
 
-### Conteúdo abordado
+<!--   - `mutate()` -->
 
-  - Relatórios em R Markdown
-      - Introdução ao R Markdown
-      - Construindo relatórios em HTML, PDF e Word
+<!-- ## Aula 4 -->
+
+<!-- ### Conteúdo abordado -->
+
+<!-- - Manipulação de bases -->
+
+<!--   - `group_by()` e `summarise()` -->
+
+<!--   - juntando duas bases -->
+
+<!-- ## Aula 5 -->
+
+<!-- ### Conteúdo abordado -->
+
+<!-- - Gráficos -->
+
+<!--   - Gráficos de pontos (dispersão) -->
+
+<!--   - Gráficos de barras -->
+
+<!-- ## Aula 6 -->
+
+<!-- ### Conteúdo abordado -->
+
+<!-- - Gráficos -->
+
+<!--   - Boxplots e histogramas -->
+
+<!--   - Customizando gráficos -->
+
+<!-- ## Aula 7 -->
+
+<!-- ### Conteúdo abordado -->
+
+<!-- - Relatórios em R Markdown -->
+
+<!--   - Introdução ao R Markdown -->
+
+<!--   - Construindo relatórios em HTML, PDF e Word -->
