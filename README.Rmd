@@ -72,11 +72,20 @@ Fora do horário de aula ou monitoria:
   
 ### Exercícios
 
-### Leitura extra
+- [R como calculadora](https://livro.curso-r.com/3-2-r-como-calculadora.html#exerc%C3%ADcios)
 
-- [Capítulo 2 - RStudio (Ciência de Dados em R)](https://livro.curso-r.com/2-rstudio.html)
+- [Objetos](https://livro.curso-r.com/3-3-objetosfuncoes#exerc%C3%ADcios-1)
 
-- [Capítulo 3 - R básico (Ciência de Dados em R)](https://livro.curso-r.com/3-r-base.html)
+- Leia a [seção Vetores](https://livro.curso-r.com/3-6-vetores.html) do nosso livro e faça os [exercícios no fim da seção](https://livro.curso-r.com/3-6-vetores.html#exerc%C3%ADcios-2)
+
+### Exercícios extras
+
+- Leia o [Capítulo 2 - RStudio](https://livro.curso-r.com/2-rstudio.html) do nosso livro.
+
+- Leia as seções [3.4 à 3.10](https://livro.curso-r.com/3-4-data-frames.html) do nosso livro e faça os seguintes exercícios:
+  - [Seção 3.7](https://livro.curso-r.com/3-7-testes-l%C3%B3gicos.html#exerc%C3%ADcios-3)
+  - [Seção 3.10](https://livro.curso-r.com/3-10-mais-sobre-data-frames.html#exerc%C3%ADcios-4)
+
 
 ### Comentado na aula e extras
 
