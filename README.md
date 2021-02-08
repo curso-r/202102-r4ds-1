@@ -44,6 +44,20 @@ Fora do horário de aula ou monitoria:
 
 ### Scripts da aula
 
+``` r
+nome_pasta <- "scripts/"
+  tibble::tibble(
+    script = list.files(nome_pasta, pattern = ".R")[1],
+    link = paste0("https://curso-r.github.io/", turma, "/", nome_pasta, script)
+  )
+```
+
+### Comentado na aula e extras
+
+  - [Rladies](https://benubah.github.io/r-community-explorer/rladies.html)
+
+  - [AI inclusive](https://www.ai-inclusive.org/)
+
 ### Lição de casa
 
   - [R como
@@ -68,12 +82,6 @@ Fora do horário de aula ou monitoria:
       - [Seção 3.8](https://livro.curso-r.com/3-8-valoresespeciais#exerc%C3%ADcios-5)
       - [Seção 3.10](https://livro.curso-r.com/3-10-mais-sobre-data-frames.html#exerc%C3%ADcios-4)
 
-### Comentado na aula e extras
-
-  - [Rladies](https://benubah.github.io/r-community-explorer/rladies.html)
-
-  - [AI inclusive](https://www.ai-inclusive.org/)
-
 <!-- ## Aula 2 -->
 
 <!-- ### Conteúdo abordado -->
@@ -93,6 +101,36 @@ Fora do horário de aula ou monitoria:
 <!--   - `arrange()` -->
 
 <!--   - pipe `%>%` -->
+
+<!-- ### Slides -->
+
+<!-- - [Introdução ao curso](https://curso-r.github.io/main-r4ds-1/slides/01-introducao-ao-curso.html) -->
+
+<!-- - [Importação](    https://curso-r.github.io/main-r4ds-1/slides/03-importacao.html) -->
+
+<!-- - [Manipulação](https://curso-r.github.io/main-r4ds-1/slides/04-manipulacao.html) -->
+
+<!-- ### Scripts da aula -->
+
+<!-- ```{r, eval = FALSE} -->
+
+<!-- nome_pasta <- "scripts/" -->
+
+<!--   tibble::tibble( -->
+
+<!--     script = list.files(nome_pasta, pattern = ".R")[1], -->
+
+<!--     link = paste0("https://curso-r.github.io/", turma, "/", nome_pasta, script) -->
+
+<!--   ) -->
+
+<!-- ``` -->
+
+<!-- ### Comentado na aula e extras -->
+
+<!-- ### Lição de casa -->
+
+<!-- ### Lição de casa extra &#x1f913; -->
 
 <!-- ## Aula 3 -->
 
