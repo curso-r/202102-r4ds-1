@@ -7,7 +7,8 @@ output: github_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  echo = FALSE
 )
 
 library(magrittr)
@@ -27,13 +28,15 @@ nome_pasta <- "scripts/"
   
 ## Slides
 tibble::tibble(
-  slide = CursoR:::list_github_files(main_repo, "slides/", "html"),
+  slide = CursoRutils:::list_github_files(main_repo, "slides/", "html"),
   link = paste0("https://curso-r.github.io/", main_repo, "/", slide)
 ) %>% 
   dplyr::filter(!stringr::str_detect(slide, "_files/"))
 ```
 
 ## Referências do curso
+
+[Clique aqui](https://github.com/curso-r/main-r4ds-1/raw/master/material_do_curso.zip) para baixar o material do curso.
 
 - Nosso livro **Ciência de Dados em R**: [https://livro.curso-r.com/](https://livro.curso-r.com/)
 
@@ -49,137 +52,77 @@ Fora do horário de aula ou monitoria:
 
 - perguntas sobre R, principalmente as que envolverem código, deverão ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
 
+## Slides
 
-## Aula 1
-
-### Conteúdo abordado
-
-- Vantagens de usarmos programação para analisar dados
-- Ambientação ao RStudio
-  - Interface
-  - Projetos
-- Introdução ao R
-  - Objetos e vetores
-  - Classes: números, caracteres, lógicos e data frames
-  - Funções e pacotes
-  - tidyverse
-  
-### Slides
-
-- [Introdução ao curso](https://curso-r.github.io/main-r4ds-1/slides/01-introducao-ao-curso.html)
-
-- [Introdução ao R](https://curso-r.github.io/main-r4ds-1/slides/02-introducao-ao-r.html) (tem mais conteúdo do que visto em aula, você pode pular o que não foi abordado ou fazer a leitura completa para se aprofundar no tema)
-
-### Scripts da aula
-
-```{r, eval = FALSE}
-nome_pasta <- "scripts/"
+```{r}
+knitr::kable(
   tibble::tibble(
-    script = list.files(nome_pasta, pattern = ".R")[1],
-    link = paste0("https://curso-r.github.io/", turma, "/", nome_pasta, script)
-  )
+    slide = CursoRutils:::list_github_files(main_repo, "slides/", "html"),
+    link = paste0("https://curso-r.github.io/", main_repo, "/", slide)
+  ) %>% 
+    dplyr::filter(!stringr::str_detect(slide, "_files/")) %>% 
+    dplyr::slice(1:2)
+)
 ```
 
-### Comentado na aula e extras
 
-- [Rladies](https://benubah.github.io/r-community-explorer/rladies.html)
+## Scripts utilizados em aula
 
-- [AI inclusive](https://www.ai-inclusive.org/)
+### Parte teórica
 
-### Lição de casa
+```{r}
+pasta <- "scripts/"
+knitr::kable(
+  tibble::tibble(
+    script = list.files(pasta, pattern = ".R"),
+    link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
+  ) %>% 
+    dplyr::slice(1)
+)
+```
 
-- [R como calculadora](https://livro.curso-r.com/3-2-r-como-calculadora.html#exerc%C3%ADcios)
+### Parte prática
 
-- [Objetos](https://livro.curso-r.com/3-3-objetosfuncoes#exerc%C3%ADcios-1)
-
-- Leia a [seção Vetores](https://livro.curso-r.com/3-6-vetores.html) do nosso livro e faça os [exercícios no fim da seção](https://livro.curso-r.com/3-6-vetores.html#exerc%C3%ADcios-2)
-
-### Lição de casa extra &#x1f913;
-
-- Leia o [Capítulo 2 - RStudio](https://livro.curso-r.com/2-rstudio.html) do nosso livro.
-
-- Leia as seções [3.4 à 3.10](https://livro.curso-r.com/3-4-data-frames.html) do nosso livro e faça os seguintes exercícios:
-  - [Seção 3.7](https://livro.curso-r.com/3-7-testes-l%C3%B3gicos.html#exerc%C3%ADcios-4)
-  - [Seção 3.8](https://livro.curso-r.com/3-8-valoresespeciais#exerc%C3%ADcios-5)
-  - [Seção 3.10](https://livro.curso-r.com/3-10-mais-sobre-data-frames.html#exerc%C3%ADcios-4)
-  
-  
-<!-- ## Aula 2 -->
-
-<!-- ### Conteúdo abordado -->
-
-<!-- - Importação de arquivos -->
-<!--   - arquivos de texto -->
-<!--   - arquivos Excel -->
-<!-- - Exportação de arquivos -->
-<!-- - Manipulação de bases -->
-<!--   - `select()` -->
-<!--   - `arrange()` -->
-<!--   - pipe `%>%` -->
-
-<!-- ### Slides -->
-
-<!-- - [Introdução ao curso](https://curso-r.github.io/main-r4ds-1/slides/01-introducao-ao-curso.html) -->
-
-<!-- - [Importação](	https://curso-r.github.io/main-r4ds-1/slides/03-importacao.html) -->
-
-<!-- - [Manipulação](https://curso-r.github.io/main-r4ds-1/slides/04-manipulacao.html) -->
-
-<!-- ### Scripts da aula -->
-
-<!-- ```{r, eval = FALSE} -->
-<!-- nome_pasta <- "scripts/" -->
-<!--   tibble::tibble( -->
-<!--     script = list.files(nome_pasta, pattern = ".R")[1], -->
-<!--     link = paste0("https://curso-r.github.io/", turma, "/", nome_pasta, script) -->
-<!--   ) -->
-<!-- ``` -->
-
-<!-- ### Comentado na aula e extras -->
-
-<!-- ### Lição de casa -->
-
-<!-- ### Lição de casa extra &#x1f913; -->
+```{r}
+pasta <- "cases/"
+knitr::kable(
+  tibble::tibble(
+    script = list.files(pasta, pattern = ".R"),
+    link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
+  )
+)
+```
 
 
+## Lição de casa
 
-<!-- ## Aula 3 -->
+```{r}
+readxl::read_excel("tab_exercicios.xlsx") %>%
+  dplyr::filter(extra == "nao", aula <= 1) %>% 
+  dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
+  dplyr::select(-desc, -url, -extra) %>%
+  knitr::kable(col.names = c("Aula", "Descrição"))
+```
 
-<!-- ### Conteúdo abordado -->
+## Lição de casa extra &#x1f913;
 
-<!-- - Manipulação de bases -->
-<!--   - `filter()` -->
-<!--   - `mutate()` -->
+```{r}
+readxl::read_excel("tab_exercicios.xlsx") %>%
+  dplyr::filter(extra == "sim", aula <= 1) %>% 
+  dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
+  dplyr::select(-desc, -url, -extra) %>%
+  knitr::kable(col.names = c("Aula", "Descrição"))
+```
 
-<!-- ## Aula 4 -->
+## Material extra
 
-<!-- ### Conteúdo abordado -->
+Referências extras comentadas nas aulas.
 
-<!-- - Manipulação de bases -->
-<!--   - `group_by()` e `summarise()` -->
-<!--   - juntando duas bases -->
-
-<!-- ## Aula 5 -->
-
-<!-- ### Conteúdo abordado -->
-
-<!-- - Gráficos -->
-<!--   - Gráficos de pontos (dispersão) -->
-<!--   - Gráficos de barras -->
-
-<!-- ## Aula 6 -->
-
-<!-- ### Conteúdo abordado -->
-
-<!-- - Gráficos -->
-<!--   - Boxplots e histogramas -->
-<!--   - Customizando gráficos -->
-
-<!-- ## Aula 7 -->
-
-<!-- ### Conteúdo abordado -->
-
-<!-- - Relatórios em R Markdown -->
-<!--   - Introdução ao R Markdown -->
-<!--   - Construindo relatórios em HTML, PDF e Word -->
+```{r}
+readxl::read_excel("referencias_extras.xlsx") %>%
+  dplyr::filter(aula <= 1) %>% 
+  dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
+  dplyr::select(-desc, -url) %>%
+  knitr::kable(col.names = c("Aula", "Descrição"))
+```
 

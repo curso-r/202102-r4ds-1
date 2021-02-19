@@ -3,6 +3,10 @@
 
 ## Referências do curso
 
+[Clique
+aqui](https://github.com/curso-r/main-r4ds-1/raw/master/material_do_curso.zip)
+para baixar o material do curso.
+
   - Nosso livro **Ciência de Dados em R**: <https://livro.curso-r.com/>
 
   - R for Data Science: <https://r4ds.had.co.nz/>
@@ -18,166 +22,55 @@ Fora do horário de aula ou monitoria:
   - perguntas sobre R, principalmente as que envolverem código, deverão
     ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
 
-## Aula 1
+## Slides
 
-### Conteúdo abordado
+| slide                              | link                                                                       |
+| :--------------------------------- | :------------------------------------------------------------------------- |
+| slides/01-introducao-ao-curso.html | <https://curso-r.github.io/main-r4ds-1/slides/01-introducao-ao-curso.html> |
+| slides/02-introducao-ao-r.html     | <https://curso-r.github.io/main-r4ds-1/slides/02-introducao-ao-r.html>     |
+| slides/03-importacao.html          | <https://curso-r.github.io/main-r4ds-1/slides/03-importacao.html>          |
+| slides/04-manipulacao.html         | <https://curso-r.github.io/main-r4ds-1/slides/04-manipulacao.html>         |
+| slides/05-ggplot2.html             | <https://curso-r.github.io/main-r4ds-1/slides/05-ggplot2.html>             |
 
-  - Vantagens de usarmos programação para analisar dados
-  - Ambientação ao RStudio
-      - Interface
-      - Projetos
-  - Introdução ao R
-      - Objetos e vetores
-      - Classes: números, caracteres, lógicos e data frames
-      - Funções e pacotes
-      - tidyverse
+## Scripts utilizados em aula
 
-### Slides
+### Parte teórica
 
-  - [Introdução ao
-    curso](https://curso-r.github.io/main-r4ds-1/slides/01-introducao-ao-curso.html)
+| script               | link                                                                   |
+| :------------------- | :--------------------------------------------------------------------- |
+| 01-introducao-ao-R.R | <https://curso-r.github.io/202102-r4ds-1/scripts/01-introducao-ao-R.R> |
+| 02-importacao.R      | <https://curso-r.github.io/202102-r4ds-1/scripts/02-importacao.R>      |
+| 03-manipulacao.R     | <https://curso-r.github.io/202102-r4ds-1/scripts/03-manipulacao.R>     |
+| 04-ggplot2.R         | <https://curso-r.github.io/202102-r4ds-1/scripts/04-ggplot2.R>         |
+| 05-rmarkdown.Rmd     | <https://curso-r.github.io/202102-r4ds-1/scripts/05-rmarkdown.Rmd>     |
 
-  - [Introdução ao
-    R](https://curso-r.github.io/main-r4ds-1/slides/02-introducao-ao-r.html)
-    (tem mais conteúdo do que visto em aula, você pode pular o que não
-    foi abordado ou fazer a leitura completa para se aprofundar no tema)
+### Parte prática
 
-### Scripts da aula
+| script | link |
+| :----- | :--- |
 
-``` r
-nome_pasta <- "scripts/"
-  tibble::tibble(
-    script = list.files(nome_pasta, pattern = ".R")[1],
-    link = paste0("https://curso-r.github.io/", turma, "/", nome_pasta, script)
-  )
-```
+## Lição de casa
 
-### Comentado na aula e extras
+| Aula | Descrição                                                                                                |
+| ---: | :------------------------------------------------------------------------------------------------------- |
+|    1 | [Exercícios — R como calculadora](https://livro.curso-r.com/3-2-r-como-calculadora.html#exerc%C3%ADcios) |
+|    1 | [Exercícios — Objetos](https://livro.curso-r.com/3-3-objetosfuncoes#exerc%C3%ADcios-1)                   |
+|    1 | [Ler a seção Vetores do nosso livro](https://livro.curso-r.com/3-6-vetores.html)                         |
+|    1 | [Exercícios — Vetores](https://livro.curso-r.com/3-6-vetores.html#exerc%C3%ADcios-3)                     |
 
-  - [Rladies](https://benubah.github.io/r-community-explorer/rladies.html)
+## Lição de casa extra 🤓
 
-  - [AI inclusive](https://www.ai-inclusive.org/)
+| Aula | Descrição                                                                                                               |
+| ---: | :---------------------------------------------------------------------------------------------------------------------- |
+|    1 | [Ler o Capítulo 2 - RStudio do nosso livro](https://livro.curso-r.com/2-rstudio.html)                                   |
+|    1 | [Ler as seções 3.4 à 3.10 do nosso livro](https://livro.curso-r.com/3-4-data-frames.html)                               |
+|    1 | [Fazer exercícios das seções 3.7, 3.8 e 3.10](https://livro.curso-r.com/3-7-testes-l%C3%B3gicos.html#exerc%C3%ADcios-4) |
 
-### Lição de casa
+## Material extra
 
-  - [R como
-    calculadora](https://livro.curso-r.com/3-2-r-como-calculadora.html#exerc%C3%ADcios)
+Referências extras comentadas nas aulas.
 
-  - [Objetos](https://livro.curso-r.com/3-3-objetosfuncoes#exerc%C3%ADcios-1)
-
-  - Leia a [seção Vetores](https://livro.curso-r.com/3-6-vetores.html)
-    do nosso livro e faça os [exercícios no fim da
-    seção](https://livro.curso-r.com/3-6-vetores.html#exerc%C3%ADcios-2)
-
-### Lição de casa extra 🤓
-
-  - Leia o [Capítulo 2 -
-    RStudio](https://livro.curso-r.com/2-rstudio.html) do nosso livro.
-
-  - Leia as seções [3.4
-    à 3.10](https://livro.curso-r.com/3-4-data-frames.html) do nosso
-    livro e faça os seguintes exercícios:
-    
-      - [Seção 3.7](https://livro.curso-r.com/3-7-testes-l%C3%B3gicos.html#exerc%C3%ADcios-4)
-      - [Seção 3.8](https://livro.curso-r.com/3-8-valoresespeciais#exerc%C3%ADcios-5)
-      - [Seção 3.10](https://livro.curso-r.com/3-10-mais-sobre-data-frames.html#exerc%C3%ADcios-4)
-
-<!-- ## Aula 2 -->
-
-<!-- ### Conteúdo abordado -->
-
-<!-- - Importação de arquivos -->
-
-<!--   - arquivos de texto -->
-
-<!--   - arquivos Excel -->
-
-<!-- - Exportação de arquivos -->
-
-<!-- - Manipulação de bases -->
-
-<!--   - `select()` -->
-
-<!--   - `arrange()` -->
-
-<!--   - pipe `%>%` -->
-
-<!-- ### Slides -->
-
-<!-- - [Introdução ao curso](https://curso-r.github.io/main-r4ds-1/slides/01-introducao-ao-curso.html) -->
-
-<!-- - [Importação](    https://curso-r.github.io/main-r4ds-1/slides/03-importacao.html) -->
-
-<!-- - [Manipulação](https://curso-r.github.io/main-r4ds-1/slides/04-manipulacao.html) -->
-
-<!-- ### Scripts da aula -->
-
-<!-- ```{r, eval = FALSE} -->
-
-<!-- nome_pasta <- "scripts/" -->
-
-<!--   tibble::tibble( -->
-
-<!--     script = list.files(nome_pasta, pattern = ".R")[1], -->
-
-<!--     link = paste0("https://curso-r.github.io/", turma, "/", nome_pasta, script) -->
-
-<!--   ) -->
-
-<!-- ``` -->
-
-<!-- ### Comentado na aula e extras -->
-
-<!-- ### Lição de casa -->
-
-<!-- ### Lição de casa extra &#x1f913; -->
-
-<!-- ## Aula 3 -->
-
-<!-- ### Conteúdo abordado -->
-
-<!-- - Manipulação de bases -->
-
-<!--   - `filter()` -->
-
-<!--   - `mutate()` -->
-
-<!-- ## Aula 4 -->
-
-<!-- ### Conteúdo abordado -->
-
-<!-- - Manipulação de bases -->
-
-<!--   - `group_by()` e `summarise()` -->
-
-<!--   - juntando duas bases -->
-
-<!-- ## Aula 5 -->
-
-<!-- ### Conteúdo abordado -->
-
-<!-- - Gráficos -->
-
-<!--   - Gráficos de pontos (dispersão) -->
-
-<!--   - Gráficos de barras -->
-
-<!-- ## Aula 6 -->
-
-<!-- ### Conteúdo abordado -->
-
-<!-- - Gráficos -->
-
-<!--   - Boxplots e histogramas -->
-
-<!--   - Customizando gráficos -->
-
-<!-- ## Aula 7 -->
-
-<!-- ### Conteúdo abordado -->
-
-<!-- - Relatórios em R Markdown -->
-
-<!--   - Introdução ao R Markdown -->
-
-<!--   - Construindo relatórios em HTML, PDF e Word -->
+| Aula | Descrição                                                              |
+| ---: | :--------------------------------------------------------------------- |
+|    1 | [Rladies](https://benubah.github.io/r-community-explorer/rladies.html) |
+|    1 | [AI inclusive](https://www.ai-inclusive.org/)                          |
