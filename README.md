@@ -28,9 +28,6 @@ Fora do horário de aula ou monitoria:
 | :--------------------------------- | :------------------------------------------------------------------------- |
 | slides/01-introducao-ao-curso.html | <https://curso-r.github.io/main-r4ds-1/slides/01-introducao-ao-curso.html> |
 | slides/02-introducao-ao-r.html     | <https://curso-r.github.io/main-r4ds-1/slides/02-introducao-ao-r.html>     |
-| slides/03-importacao.html          | <https://curso-r.github.io/main-r4ds-1/slides/03-importacao.html>          |
-| slides/04-manipulacao.html         | <https://curso-r.github.io/main-r4ds-1/slides/04-manipulacao.html>         |
-| slides/05-ggplot2.html             | <https://curso-r.github.io/main-r4ds-1/slides/05-ggplot2.html>             |
 
 ## Scripts utilizados em aula
 
@@ -39,10 +36,6 @@ Fora do horário de aula ou monitoria:
 | script               | link                                                                   |
 | :------------------- | :--------------------------------------------------------------------- |
 | 01-introducao-ao-R.R | <https://curso-r.github.io/202102-r4ds-1/scripts/01-introducao-ao-R.R> |
-| 02-importacao.R      | <https://curso-r.github.io/202102-r4ds-1/scripts/02-importacao.R>      |
-| 03-manipulacao.R     | <https://curso-r.github.io/202102-r4ds-1/scripts/03-manipulacao.R>     |
-| 04-ggplot2.R         | <https://curso-r.github.io/202102-r4ds-1/scripts/04-ggplot2.R>         |
-| 05-rmarkdown.Rmd     | <https://curso-r.github.io/202102-r4ds-1/scripts/05-rmarkdown.Rmd>     |
 
 ### Parte prática
 
