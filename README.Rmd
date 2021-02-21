@@ -40,7 +40,7 @@ tibble::tibble(
 
 - Nosso livro **Ciência de Dados em R**: [https://livro.curso-r.com/](https://livro.curso-r.com/)
 
-- R for Data Science: [https://r4ds.had.co.nz/](https://r4ds.had.co.nz/)
+- R for Data Science: [https://r4ds.had.co.nz/](https://r4ds.had.co.nz/) (em inglês) e [https://es.r4ds.hadley.nz/](https://es.r4ds.hadley.nz/) (em espanhol).
 
 - Nosso blog: [https://curso-r.com/blog/](https://curso-r.com/blog/)
 
@@ -124,6 +124,6 @@ readxl::read_excel("referencias_extras.xlsx") %>%
   dplyr::filter(aula <= 1) %>% 
   dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
   dplyr::select(-desc, -url) %>%
-  knitr::kable(col.names = c("Aula", "Descrição"))
+  knitr::kable(col.names = c("Aula", "Tema", "Descrição"))
 ```
 
