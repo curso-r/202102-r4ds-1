@@ -36,6 +36,7 @@ LETTERS
 
 # Salvando o valor 1 no objeto "obj"
 obj <- 1
+
 obj
 
 # Também dizemos 'guardando as saídas'
@@ -72,6 +73,9 @@ x1 <- 2
 objeto <- 3
 meu_objeto <- 4
 meu.objeto <- 5
+meuObjeto
+base_filtrada_por_ano <- 2
+
 
 # Não permitido
 
@@ -81,9 +85,12 @@ meu-objeto <- 3
 
 # Estilo de nomes
 
+base
+
 eu_uso_snake_case
 outrasPessoasUsamCamelCase
 algumas.pessoas.usam.pontos
+
 E_algumasPoucas.Pessoas_RENUNCIAMconvenções
 
 
@@ -91,6 +98,9 @@ E_algumasPoucas.Pessoas_RENUNCIAMconvenções
 
 # 1. Multiplique a sua idade por 12 e salve em 
 # um objeto chamado "meses".
+
+meses <- 12 * 31
+meses
 
 # -------------------------------------------------------------------------
 
@@ -103,6 +113,8 @@ E_algumasPoucas.Pessoas_RENUNCIAMconvenções
 nrow(mtcars)
 ncol(mtcars)
 
+nrow(cars)
+
 # Podemos usar a função help para ver
 # a documentação de um objeto ou função
 help(mtcars)
@@ -111,11 +123,15 @@ help(nrow)
 # Uma função muito útil para data frames é a View
 View(mtcars)
 
+a <- 1
+A <- 2
+
 # Uma função pode ter mais de um argumento
 # Argumentos são sempre separados por vírgulas
 
 sum(1, 2)
 sum(2, 3, 4)
+2 + 3 + 4
 
 # Nas próximas aulas vamos aprender a 
 nossa_base <- funcao_que_carrega_uma_base()
@@ -128,6 +144,10 @@ warpbreaks
 
 # Cada coluna da base representa uma variável
 # Cada variável pode ser de um tipo (classe) diferente
+
+a <- "b"
+a
+b
 
 # Podemos somar dois números
 1 + 2
@@ -192,7 +212,7 @@ vetor2
 
 # Vetor de 1 a 10
 1:10
-
+c(1, 2, 3, 4, ...)
 # Vetor de 10 a 1
 10:1
 
@@ -211,10 +231,15 @@ class(vetor2)
 # Se tentarmos misturar duas classes, o R vai apresentar o
 # comportamento conhecido como coerção
 
-vetor <- c(1, 2, "a")
+vetor <- c(1.1, 2.2, "3,2")
 
 vetor
 class(vetor)
+
+is.numeric(vetor)
+is.data.frame()
+is.logical()
+is.factor()
 
 # character > numeric > integer > logical
 
@@ -233,10 +258,24 @@ vetor * 10
 
 # Você também pode fazer operações que envolvem mais de um vetor:
 
+mtcars$mpg + c(0.01)
+
+rep(0.01, 32)
+
+mtcars$mpg + rep(0.01, length(mtcars$mpg))
+
+mtcars$mpg + 0.01
+
+1:10
+seq(1, 10, 2)
+
+
 vetor1 <- c(1, 2, 3)
 vetor2 <- c(10, 20, 30)
 
 vetor1  + vetor2
+
+length(c(1))
 
 # Pacotes -----------------------------------------------------------------
 
@@ -247,5 +286,5 @@ library(tidyverse)
 library(dplyr)
 
 # Também é possível acessar as funções usando ::
-dplyr::filter_at()
+any_of()
 dplyr::transmute()
