@@ -127,3 +127,24 @@ readxl::read_excel("referencias_extras.xlsx") %>%
   knitr::kable(col.names = c("Aula", "Tema", "Descrição"))
 ```
 
+
+
+```{r eval=FALSE, include=TRUE}
+## Pacotes para instalar
+install.packages("tidyverse", "writexl", "httr",
+                 "patchwork", "likert", "scales",
+                 "prettydoc")
+```
+
+
+## Redes sociais da Curso-R
+
+Instagram: https://www.instagram.com/cursoo_r/
+
+Twitter: https://twitter.com/curso_r
+
+Instagram: https://www.youtube.com/c/CursoR6/featured
+
+Linkedin: https://www.linkedin.com/company/curso-r/
+
+Facebook: https://www.facebook.com/cursodeR

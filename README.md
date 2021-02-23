@@ -73,3 +73,15 @@ Referências extras comentadas nas aulas.
 |    1 | Introdução  | [Folha de cola (cheatsheet): RStudio](https://raw.githubusercontent.com/rstudio/cheatsheets/master/translations/portuguese/rstudio-IDE-cheatsheet-portuguese.pdf) |
 |    1 | Introdução  | [Capítulo do livro “Ciência de Dados em R”: R Básico](https://livro.curso-r.com/3-r-base.html)                                                                    |
 |    1 | Introdução  | [Capítulo do livro “Ciência de Dados em R”: Pacotes](https://livro.curso-r.com/4-pacotes.html)                                                                    |
+
+## Redes sociais da Curso-R
+
+Instagram: <https://www.instagram.com/cursoo_r/>
+
+Twitter: <https://twitter.com/curso_r>
+
+Instagram: <https://www.youtube.com/c/CursoR6/featured>
+
+Linkedin: <https://www.linkedin.com/company/curso-r/>
+
+Facebook: <https://www.facebook.com/cursodeR>
