@@ -15,24 +15,9 @@ library(magrittr)
 
 main_repo <- "main-r4ds-1"
 turma <- "202102-r4ds-1"
+num_aula <- 2
 ```
 
-
-```{r, include = FALSE, eval = FALSE}
-## Scripts usados em aula
-nome_pasta <- "scripts/"
-  tibble::tibble(
-    script = list.files(nome_pasta, pattern = ".R"),
-    link = paste0("https://curso-r.github.io/", turma, "/", nome_pasta, script)
-  )
-  
-## Slides
-tibble::tibble(
-  slide = CursoRutils:::list_github_files(main_repo, "slides/", "html"),
-  link = paste0("https://curso-r.github.io/", main_repo, "/", slide)
-) %>% 
-  dplyr::filter(!stringr::str_detect(slide, "_files/"))
-```
 
 ## Referências do curso
 
@@ -61,7 +46,7 @@ knitr::kable(
     link = paste0("https://curso-r.github.io/", main_repo, "/", slide)
   ) %>% 
     dplyr::filter(!stringr::str_detect(slide, "_files/")) %>% 
-    dplyr::slice(1:2)
+    dplyr::slice(1:4)
 )
 ```
 
@@ -77,14 +62,14 @@ knitr::kable(
     script = list.files(pasta, pattern = ".R"),
     link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
   ) %>% 
-    dplyr::slice(1)
+    dplyr::slice(1:2)
 )
 ```
 
 ### Parte prática
 
 ```{r}
-pasta <- "cases/"
+pasta <- "pratica/"
 knitr::kable(
   tibble::tibble(
     script = list.files(pasta, pattern = ".R"),
@@ -99,7 +84,7 @@ knitr::kable(
 
 ```{r}
 readxl::read_excel("tab_exercicios.xlsx") %>%
-  dplyr::filter(extra == "nao", aula <= 1) %>% 
+  dplyr::filter(extra == "nao", aula <= num_aula) %>% 
   dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
   dplyr::select(-desc, -url, -extra) %>%
   knitr::kable(col.names = c("Aula", "Descrição"))
@@ -109,7 +94,7 @@ readxl::read_excel("tab_exercicios.xlsx") %>%
 
 ```{r}
 readxl::read_excel("tab_exercicios.xlsx") %>%
-  dplyr::filter(extra == "sim", aula <= 1) %>% 
+  dplyr::filter(extra == "sim", aula <= num_aula) %>% 
   dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
   dplyr::select(-desc, -url, -extra) %>%
   knitr::kable(col.names = c("Aula", "Descrição"))
@@ -121,7 +106,7 @@ Referências extras comentadas nas aulas.
 
 ```{r}
 readxl::read_excel("referencias_extras.xlsx") %>%
-  dplyr::filter(aula <= 1) %>% 
+  dplyr::filter(aula <= num_aula) %>% 
   dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
   dplyr::select(-desc, -url) %>%
   knitr::kable(col.names = c("Aula", "Tema", "Descrição"))
