@@ -56,9 +56,6 @@ Fora do horário de aula ou monitoria:
 |    1 | [Exercícios — Vetores](https://livro.curso-r.com/3-6-vetores.html#exerc%C3%ADcios-3)                     |
 |    2 | [Ler a seções 5.1, 5.2 e 5.3 do nosso livro](https://livro.curso-r.com/5-importacao.html)                |
 |    2 | [Exercícios — Importação](https://livro.curso-r.com/5-2-readr.html#exerc%C3%ADcios-9)                    |
-|    2 | [Exercícios — Selecionando colunas](https://livro.curso-r.com/7-2-dplyr.html#exerc%C3%ADcios-11)         |
-|    2 | [Exercícios — Ordenando a base](https://livro.curso-r.com/7-2-dplyr.html#exerc%C3%ADcios-12)             |
-|    2 | [Exercícios — Pipe](https://livro.curso-r.com/6-1-o-operador-pipe.html#exerc%C3%ADcios-10)               |
 
 ## Lição de casa extra 🤓
 
