@@ -15,7 +15,7 @@ library(magrittr)
 
 main_repo <- "main-r4ds-1"
 turma <- "202102-r4ds-1"
-num_aula <- 2
+num_aula <- 3
 ```
 
 
@@ -62,7 +62,7 @@ knitr::kable(
     script = list.files(pasta, pattern = ".R"),
     link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
   ) %>% 
-    dplyr::slice(1:2)
+    dplyr::slice(1:3)
 )
 ```
 
@@ -74,8 +74,8 @@ knitr::kable(
   tibble::tibble(
     script = list.files(pasta, pattern = ".R"),
     link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
-  ) %>% 
-    dplyr::slice(1)
+  ) #%>% 
+    # dplyr::slice(1:3)
 )
 ```
 
