@@ -4,13 +4,19 @@ library(tidyverse)
 
 # Base de dados -----------------------------------------------------------
 
-imdb <- read_rds("dados/imdb.rds")
+imdb <- readr::read_rds("dados/imdb.rds")
 
 # Jeito de ver a base -----------------------------------------------------
 
-glimpse(imdb)
+glimpse(imdb) # tidyverse
+
+str(imdb) # base R
+
 names(imdb)
-View(imdb)
+
+View(imdb) # base R
+
+view(imdb) # tidyverse
 
 # dplyr: 6 verbos principais
 # select()    # seleciona colunas do data.frame
@@ -26,6 +32,9 @@ View(imdb)
 
 select(imdb, titulo)
 
+imdb_titulos <- select(imdb, titulo)
+
+
 # A operação NÃO MODIFICA O OBJETO imdb
 
 imdb
@@ -34,11 +43,13 @@ imdb
 
 select(imdb, titulo, ano, orcamento)
 
+
 select(imdb, titulo:cor)
 
 # Funções auxiliares
 
 select(imdb, starts_with("ator"))
+
 select(imdb, contains("to"))
 
 # Principais funções auxiliares
@@ -51,25 +62,48 @@ select(imdb, contains("to"))
 
 select(imdb, -starts_with("ator"), -titulo, -ends_with("s"))
 
+select(imdb, -starts_with("ator"), -titulo, -ends_with("s"))
+
+# os dois exemplos abaixo tem resultados diferentes.
+select(imdb,  titulo, -starts_with("ator"))
+
+select(imdb, -starts_with("ator"), titulo)
+
+# Selecionar apenas doubles
+select(imdb, where(is.double))
+
+# Selecionar apenas character
+select(imdb, where(is.character))
+
+# matches() - para usar com RegEx
+
 # arrange -----------------------------------------------------------------
 
 # Ordenando linhas de forma crescente de acordo com 
 # os valores de uma coluna
 
-arrange(imdb, orcamento)
+View(arrange(imdb, orcamento))
 
 # Agora de forma decrescente
 
-arrange(imdb, desc(orcamento))
+View(arrange(imdb, desc(orcamento)))
+
+View(arrange(imdb, -orcamento))
 
 # Ordenando de acordo com os valores 
 # de duas colunas
 
-arrange(imdb, desc(ano), orcamento)
+View(arrange(imdb, desc(ano), desc(orcamento)))
+
+View(arrange(imdb, diretor))
+
+View(arrange(imdb, desc(diretor)))
 
 # O que acontece com o NA?
 
 df <- tibble(x = c(NA, 2, 1), y = c(1, 2, 3))
+
+df 
 arrange(df, x)
 arrange(df, desc(x))
 
@@ -89,7 +123,7 @@ x %>% f(x) %>% g(x) # ERRADO
 esfrie(
   asse(
     coloque(
-      bata(
+   #   bata(
         acrescente(
           recipiente(
             rep(
@@ -100,8 +134,8 @@ esfrie(
           ), 
           "farinha", até = "macio"
         ), 
-        duração = "3min"
-      ), 
+       # duração = "3min"
+     # ), 
       lugar = "forma", tipo = "grande", untada = TRUE
     ), 
     duração = "50min"
@@ -115,17 +149,40 @@ esfrie(
 
 recipiente(rep("farinha", 2), "água", "fermento", "leite", "óleo") %>%
   acrescente("farinha", até = "macio") %>%
-  bata(duração = "3min") %>%
+#  bata(duração = "3min") %>%
   coloque(lugar = "forma", tipo = "grande", untada = TRUE) %>%
   asse(duração = "50min") %>%
   esfrie("geladeira", "20min")
 
 # ATALHO DO %>%: CTRL (command) + SHIFT + M
 
+
+imdb_titulo_diretor <- imdb %>% 
+  select(titulo, diretor) %>% 
+  arrange(ano) %>% 
+  View() # view do R base
+
+# sem pipe
+View(arrange(select(imdb,
+                    titulo, diretor, ano), ano))
+
+
+imdb_titulo_diretor # NULL
+
+
+imdb_titulo_diretor_2 <- imdb %>% 
+  select(titulo, diretor) %>% 
+  view() # view do tidyverse
+
+imdb_titulo_diretor_2 # NULL
+
+
+
 # Conceitos importantes para filtros! --------------------------------------
 
 ## Comparações lógicas ------------------------------------------------------
 
+x <- 1
 
 # Testes com resultado verdadeiro
 x == 1
@@ -134,6 +191,8 @@ x == 1
 # Testes com resultado falso
 x == 2
 "a" == "b"
+
+"a" == "A"
 
 # Maior
 x > 3
@@ -152,11 +211,13 @@ x < 1
 x <= 1
 
 # Diferente
-x != 1
+x != 1 
 x != 2
 
 x %in% c(1, 2, 3)
 "a" %in% c("b", "c")
+
+
 
 ## Operadores lógicos -------------------------------
 
@@ -165,6 +226,7 @@ x %in% c(1, 2, 3)
 
 x <- 5
 x >= 3 & x <=7
+
 
 
 y <- 2
@@ -187,54 +249,78 @@ y >= 3 | y == 0
 !FALSE
 
 
+
 w <- 5
-(!w < 4)
+!w < 4
+
+# Associar ! com %in% 
+!"a" %in% c("b", "c")
+!FALSE
+
+# == testando a igualdade/comparando
+# != diferença/comparando
+
+# ! contrário/negando
 
 # filter ------------------------------------------------------------------
 
-
 # Filtrando uma coluna da base
-imdb %>% filter(nota_imdb > 9)
+imdb %>% filter(nota_imdb > 9) %>% view()
 imdb %>% filter(diretor == "Quentin Tarantino")
 
 # Vendo categorias de uma variável
 unique(imdb$cor) # saída é um vetor
 imdb %>% distinct(cor) # saída é uma tibble
 
+imdb %>% distinct(classificacao)
+
+imdb %>% distinct(diretor)
+
+
 # Filtrando duas colunas da base
 
 ## Recentes e com nota alta
-imdb %>% filter(ano > 2010, nota_imdb > 8.5)
-imdb %>% filter(ano > 2010 & nota_imdb > 8.5)
+imdb %>% 
+ # select(titulo, ano, nota_imdb) %>% 
+  filter(ano > 2010, nota_imdb > 8.5)
+
+imdb %>% filter(ano > 2010 & nota_imdb > 8.5) 
+
 
 ## Gastaram menos de 100 mil, faturaram mais de 1 milhão
-imdb %>% filter(orcamento < 100000, receita > 1000000)
+imdb %>% filter(orcamento < 100000, receita > 1000000) %>% view()
 
 ## Lucraram
-imdb %>% filter(receita - orcamento > 0)
+imdb %>% filter(receita - orcamento > 0) %>% view()
 
 ## Lucraram mais de 500 milhões OU têm nota muito alta
-imdb %>% filter(receita - orcamento > 500000000 | nota_imdb > 9)
+imdb %>% filter(receita - orcamento > 500000000 | nota_imdb > 9) %>% view()
 
 # O operador %in%
-imdb %>% filter(ator_1 %in% c('Angelina Jolie Pitt', "Brad Pitt"))
+imdb %>% filter(ator_1 %in% c('Angelina Jolie Pitt', "Brad Pitt")) %>% view()
 
 # Negação
 imdb %>% filter(diretor %in% c("Quentin Tarantino", "Steven Spielberg"))
-imdb %>% filter(!diretor %in% c("Quentin Tarantino", "Steven Spielberg"))
+imdb %>% filter(!diretor %in% c("Quentin Tarantino", "Steven Spielberg")) %>% view()
 
 
 # O que acontece com o NA?
 df <- tibble(x = c(1, NA, 3))
 
+df
+
 filter(df, x > 1)
+
 filter(df, is.na(x) | x > 1)
 
 # Filtrando texto sem correspondência exata
 # A função str_detect()
 textos <- c("a", "aa","abc", "bc", "A", NA)
 
+textos
+
 str_detect(textos, pattern = "a")
+
 
 ## Pegando os seis primeiros valores da coluna "generos"
 imdb$generos[1:6]
@@ -246,7 +332,10 @@ str_detect(
 
 ## Pegando apenas os filmes que 
 ## tenham o gênero ação
-imdb %>% filter(str_detect(generos, "Action"))
+imdb %>% filter(str_detect(generos, "Comedy")) %>% view()
+
+
+
 
 # mutate ------------------------------------------------------------------
 
