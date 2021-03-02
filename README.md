@@ -93,6 +93,8 @@ Referências extras comentadas nas aulas.
 |    2 | Pipe                 | [Capítulo do livro “Ciência de Dados em R”: Pipe](https://livro.curso-r.com/6-pipe.html)                                                                           |
 |    3 | Manipulação de bases | [Capítulo do livro “Ciência de Dados em R”: Manipulação](https://livro.curso-r.com/7-manipulacao.html)                                                             |
 |    3 | Manipulação de bases | [Folha de cola (cheatsheet): dplyr](https://raw.githubusercontent.com/rstudio/cheatsheets/master/translations/portuguese/data-wrangling-cheatsheet-portuguese.pdf) |
+|    3 | Limpeza de bases     | [Post sobre o pacote janitor](https://blog.curso-r.com/posts/2017-07-24-janitor/)                                                                                  |
+|    3 | Importação           | [Importação de dados do google sheets](https://googlesheets4.tidyverse.org/)                                                                                       |
 
 Materiais que comentamos quando tiramos dúvidas (não necessariamente são
 relacionadas com o conteúdo da aula).
@@ -105,6 +107,7 @@ relacionadas com o conteúdo da aula).
 |    2 | Conversa/Dúvidas | [(Git) Material sobre Git e GitHub no RStudio](https://beatrizmilz.com/git_rstudio.html)                                                          |
 |    2 | Conversa/Dúvidas | [(Git) Playlist de videos sobre a Hacktoberfest – R-Ladies São Paulo](https://www.youtube.com/playlist?list=PLufjVrrUAoSdny-WECY4Gr2pn5OQGG_FN)   |
 |    2 | Conversa/Dúvidas | [(Importação de PDFs) Post {tabulizer}: Tabela do PDF para data.frame em segundos](https://blog.curso-r.com/posts/2021-01-08-tabulizer/)          |
+|    3 | Conversa/Dúvidas | [API para enviar e-mails](https://sendgrid.com/)                                                                                                  |
 
 ## Redes sociais da Curso-R
 
