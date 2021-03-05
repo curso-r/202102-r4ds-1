@@ -109,7 +109,7 @@ arrange(df, desc(x))
 
 # Pipe (%>%) --------------------------------------------------------------
 
-# Transforma funçõe aninhadas em funções
+# Transforma funções aninhadas em funções
 # sequenciais
 
 # g(f(x)) = x %>% f() %>% g()
@@ -162,6 +162,9 @@ imdb_titulo_diretor <- imdb %>%
   arrange(ano) %>% 
   View() # view do R base
 
+
+
+
 # sem pipe
 View(arrange(select(imdb,
                     titulo, diretor, ano), ano))
@@ -175,6 +178,12 @@ imdb_titulo_diretor_2 <- imdb %>%
   view() # view do tidyverse
 
 imdb_titulo_diretor_2 # NULL
+
+
+# O CÓDIGO ABAIXO NÃO FUNCIONA!
+imdb 
+%>%
+  select(titulo, diretor)
 
 
 
@@ -349,20 +358,27 @@ imdb %>%
 
 imdb %>% 
   mutate(duracao_horas = duracao/60) %>% 
-  View()
+  # REALOCAR A COLUNA duracao_horas PARA FICAR APÓS A COLUNA duracao
+  relocate(duracao_horas, .after = duracao) %>% 
+  view()
+
+# Ressaltar o NA
 
 imdb %>% 
   mutate(lucro = receita - orcamento) %>% 
+  relocate(lucro, .after = receita) %>% 
   View()
 
 # A função ifelse é uma ótima ferramenta
 # para fazermos classificação binária
 
-imdb %>% mutate(
+imdb_info_lucro <- imdb %>% 
+  mutate(
   lucro = receita - orcamento,
   houve_lucro = ifelse(lucro > 0, "Sim", "Não")
 ) %>% 
-  View()
+  relocate(c(lucro, houve_lucro), .after = receita) %>% 
+  view()
 
 # summarise ---------------------------------------------------------------
 
@@ -392,16 +408,31 @@ imdb %>% summarise(
   media_orcamento = mean(orcamento, na.rm = TRUE),
   media_receita = mean(receita, na.rm = TRUE),
   qtd = n(),
-  qtd_diretores = n_distinct(diretor)
+  qtd_diretores = n_distinct(diretor),
+  qtd_protagonista = n_distinct(ator_1)
 )
 
+# tidy
+imdb %>% 
+  distinct(diretor)
+
+imdb %>% distinct(cor)
+
+pessoas <- c("bea", "will", "julio", "bea", "hidelbrando", "will")
+
+unique(pessoas)
+
+# rbase
+unique(imdb$diretor)
 
 # funcoes que transformam -> N valores
+# usamos dentro do mutate!
 log(1:10)
 sqrt()
 str_detect()
 
 # funcoes que sumarizam -> 1 valor
+# usamos no summarize!
 mean(c(1, NA, 2))
 mean(c(1, NA, 2), na.rm = TRUE)
 n_distinct()
@@ -414,14 +445,47 @@ n_distinct()
 imdb %>% group_by(cor)
 
 # Agrupando e sumarizando
-imdb %>% 
-  group_by(cor) %>% 
+imdb %>%
+  group_by(cor) %>%
   summarise(
     media_orcamento = mean(orcamento, na.rm = TRUE),
     media_receita = mean(receita, na.rm = TRUE),
     qtd = n(),
-    qtd_diretores = n_distinct(diretor)
+    qtd_diretores = n_distinct(diretor),
+  ) %>%
+  # group_by(cor) %>% 
+  # ungroup() %>%  
+  
+  # qual a porcentagem de diretores dentro de cada grupo?
+  mutate(
+    total_diretores = sum(qtd_diretores),
+    porc_diretores = qtd_diretores / total_diretores * 100
+  ) %>% 
+  select(-total_diretores)
+
+
+
+
+
+# media de orcamento por diretores
+# exemplo da duvida
+imdb %>% 
+  group_by(diretor) %>% 
+  summarise(
+    media_orcamento = mean(orcamento, na.rm = TRUE),
+    n_filmes = n()
+  ) %>% 
+  filter(n_filmes > 1) %>% 
+  arrange(desc(media_orcamento))
+  
+
+# dúvida enviada
+imdb %>% 
+  group_by(classificacao, cor) %>% 
+  summarise(
+    total = n()
   )
+
 
 # left join ---------------------------------------------------------------
 
@@ -436,7 +500,17 @@ band_members %>% left_join(band_instruments)
 band_instruments %>% left_join(band_members)
 
 # o argumento 'by'
-band_members %>% left_join(band_instruments, by = "name")
+band_members %>% left_join(band_instruments,
+                           by = "name")
+
+
+# unindo com chaves diferentes
+band_members2 <- band_members %>% 
+  rename("nome" = name)
+
+
+band_members2 %>% left_join(band_instruments,
+                            by = c("nome" = "name"))
 
 # De volta ao imdb...
 
@@ -446,9 +520,10 @@ tab_lucro_diretor <- imdb %>%
   mutate(lucro = receita - orcamento) %>% 
   group_by(diretor) %>% 
   summarise(
-    lucro_medio = mean(lucro, na.rm = TRUE),
-    lucro_maximo = max(lucro, na.rm = TRUE),
-  )
+    lucro_medio_diretor = mean(lucro, na.rm = TRUE),
+    lucro_maximo_diretor = max(lucro, na.rm = TRUE),
+  ) %>% 
+  view()
 
 # E se quisermos colocar essa informação na base
 # original? Para sabermos, por exemplo, o quanto
@@ -458,7 +533,8 @@ tab_lucro_diretor <- imdb %>%
 # Usamos a funçõa left join para trazer a
 # coluna lucro_medio para a base imdb, associando
 # cada valor de lucro_medio ao respectivo diretor
-left_join(imdb, tab_lucro_diretor, by = "diretor")
+imdb %>% 
+left_join(tab_lucro_diretor, by = "diretor")
 
 # Salvando em um objeto
 imdb_com_lucro_medio <- imdb %>% 
@@ -475,10 +551,10 @@ scales::percent(1)
 imdb_com_lucro_medio %>% 
   mutate(
     lucro = receita - orcamento,
-    lucro_relativo = (lucro - lucro_medio)/lucro_medio,
-    lucro_relativo = scales::percent(lucro_relativo)
+    lucro_relativo = (lucro - lucro_medio_diretor)/lucro_medio_diretor,
+    lucro_relativo_2 = scales::percent(lucro_relativo)
   ) %>% 
-  View()
+  view()
 
 # Fazendo de-para
 
@@ -487,17 +563,44 @@ depara_cores <- tibble(
   cor_em_ptBR = c("colorido", "preto e branco")
 )
 
-left_join(imdb, depara_cores, by = c("cor")) 
+# Criar a tibble manualmente
+
+tibble(
+  cor = c("Color", "Black and White"),
+  cor_em_ptBR = c("colorido", "preto e branco")
+) %>% 
+  add_row(
+    cor = NA, cor_em_ptBR = NA
+  )
+
+cor <- c("Color", "Black and White")
+cor_em_ptBR <- c("colorido", "preto e branco")
+
+tibble(cor, cor_em_ptBR)
+
+data.frame(cor, cor_em_ptBR)
+
+data.frame(
+  cor = c("Color", "Black and White"),
+  cor_em_ptBR = c("colorido", "preto e branco")
+)
+
+
+
+left_join(imdb, depara_cores, by = c("cor")) %>% view()
 
 imdb %>% 
   left_join(depara_cores, by = c("cor")) %>% 
-  select(cor, cor_em_ptBR) %>% 
+  select(titulo, cor, cor_em_ptBR) %>% 
   View()
 
 # OBS: existe uma família de joins
 
 band_instruments %>% left_join(band_members)
+
 band_instruments %>% right_join(band_members)
+
 band_instruments %>% inner_join(band_members)
+
 band_instruments %>% full_join(band_members)
 
