@@ -49,6 +49,7 @@ Fora do horário de aula ou monitoria:
 | aula-2.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-2.R>           |
 | aula-3-exemplo-2.R | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-3-exemplo-2.R> |
 | aula-3.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-3.R>           |
+| aula-4.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-4.R>           |
 
 ## Lição de casa
 
@@ -95,6 +96,13 @@ Referências extras comentadas nas aulas.
 |    3 | Manipulação de bases | [Folha de cola (cheatsheet): dplyr](https://raw.githubusercontent.com/rstudio/cheatsheets/master/translations/portuguese/data-wrangling-cheatsheet-portuguese.pdf) |
 |    3 | Limpeza de bases     | [Post sobre o pacote janitor](https://blog.curso-r.com/posts/2017-07-24-janitor/)                                                                                  |
 |    3 | Importação           | [Importação de dados do google sheets](https://googlesheets4.tidyverse.org/)                                                                                       |
+|    4 | Joins - Unindo bases | [Joins: juntando bases de dados](https://youtu.be/xnUo25VRH70)                                                                                                     |
+|    4 | Manipulação de bases | [Animações sobre dplyr + Join](https://github.com/gadenbuie/tidyexplain)                                                                                           |
+|    4 | Manipulação de bases | [Pacote abjutils - Remover acentos de textos](https://github.com/abjur/abjutils)                                                                                   |
+|    4 | Manipulação de bases | [Pacote dbplyr: dplyr para quem usa SQL](https://dbplyr.tidyverse.org/articles/translation-verb.html)                                                              |
+|    4 | Joins - Unindo bases | [Tidyexplain - Ilustrações sobre joins](https://www.garrickadenbuie.com/project/tidyexplain/)                                                                      |
+|    4 | Joins - Unindo bases | [Documentação sobre joins](https://dplyr.tidyverse.org/reference/join.html)                                                                                        |
+|    4 | Fatores              | [Folha de cola (cheatsheet): forcats](https://raw.githubusercontent.com/rstudio/cheatsheets/master/factors.pdf)                                                    |
 
 Materiais que comentamos quando tiramos dúvidas (não necessariamente são
 relacionadas com o conteúdo da aula).
