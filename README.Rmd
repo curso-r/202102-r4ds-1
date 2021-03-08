@@ -109,6 +109,7 @@ readxl::read_excel("referencias_extras.xlsx") %>%
   dplyr::filter(aula <= num_aula, tema != "Conversa/Dúvidas") %>% 
   dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
   dplyr::select(-desc, -url) %>%
+  dplyr::arrange(num_aula) %>% 
   knitr::kable(col.names = c("Aula", "Tema", "Descrição"))
 ```
 

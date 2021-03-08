@@ -84,7 +84,7 @@ Referências extras comentadas nas aulas.
 | Aula | Tema                 | Descrição                                                                                                                                                          |
 |-----:|:---------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    0 | Instalação           | [Capítulo do livro “Ciência de Dados em R”: Instalação](https://livro.curso-r.com/1-instalacao.html)                                                               |
-|    1 | Comunidades          | [R-Ladies](https://benubah.github.io/r-community-explorer/rladies.html)                                                                                            |
+|    1 | Comunidades          | [R-Ladies - Dashboard](https://benubah.github.io/r-community-explorer/rladies.html)                                                                                |
 |    1 | Comunidades          | [AI Inclusive](https://www.ai-inclusive.org/)                                                                                                                      |
 |    1 | Introdução           | [Folha de cola (cheatsheet): R Básico](https://rstudio.com/wp-content/uploads/2016/05/base-r.pdf)                                                                  |
 |    1 | Introdução           | [Folha de cola (cheatsheet): RStudio](https://raw.githubusercontent.com/rstudio/cheatsheets/master/translations/portuguese/rstudio-IDE-cheatsheet-portuguese.pdf)  |
@@ -105,6 +105,10 @@ Referências extras comentadas nas aulas.
 |    4 | Manipulação de bases | [Pacote dbplyr: dplyr para quem usa SQL](https://dbplyr.tidyverse.org/articles/translation-verb.html)                                                              |
 |    4 | Joins - Unindo bases | [Tidyexplain - Ilustrações sobre joins](https://www.garrickadenbuie.com/project/tidyexplain/)                                                                      |
 |    4 | Joins - Unindo bases | [Documentação sobre joins](https://dplyr.tidyverse.org/reference/join.html)                                                                                        |
+|    5 | Comunidades          | [R Brasil - Grupo no telegram](https://t.me/rbrasiloficial)                                                                                                        |
+|    5 | Comunidades          | [Apresentação sobre a R-Ladies São Paulo](https://r-ladies-sao-paulo.github.io/RLadiesTheme/)                                                                      |
+|    5 | Comunidades          | [Capítulos da R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)                                                                            |
+|    5 | Comunidades          | [Pacote dados - Base de dados traduzidas](https://cienciadedatos.github.io/dados/)                                                                                 |
 |    4 | Fatores              | [Folha de cola (cheatsheet): forcats](https://raw.githubusercontent.com/rstudio/cheatsheets/master/factors.pdf)                                                    |
 |    5 | Gráficos             | [Folha de cola (cheatsheet): ggplot2](https://raw.githubusercontent.com/rstudio/cheatsheets/master/translations/portuguese/ggplot2-cheatsheet-portuguese.pdf)      |
 |    5 | Gráficos             | [Capítulo do livro “Ciência de Dados em R”: Gráficos](https://livro.curso-r.com/8-graficos.html)                                                                   |
