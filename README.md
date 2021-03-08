@@ -31,6 +31,7 @@ Fora do horário de aula ou monitoria:
 | slides/02-introducao-ao-r.html     | <https://curso-r.github.io/main-r4ds-1/slides/02-introducao-ao-r.html>     |
 | slides/03-importacao.html          | <https://curso-r.github.io/main-r4ds-1/slides/03-importacao.html>          |
 | slides/04-manipulacao.html         | <https://curso-r.github.io/main-r4ds-1/slides/04-manipulacao.html>         |
+| slides/05-ggplot2.html             | <https://curso-r.github.io/main-r4ds-1/slides/05-ggplot2.html>             |
 
 ## Scripts utilizados em aula
 
@@ -41,6 +42,7 @@ Fora do horário de aula ou monitoria:
 | 01-introducao-ao-R.R | <https://curso-r.github.io/202102-r4ds-1/scripts/01-introducao-ao-R.R> |
 | 02-importacao.R      | <https://curso-r.github.io/202102-r4ds-1/scripts/02-importacao.R>      |
 | 03-manipulacao.R     | <https://curso-r.github.io/202102-r4ds-1/scripts/03-manipulacao.R>     |
+| 04-ggplot2.R         | <https://curso-r.github.io/202102-r4ds-1/scripts/04-ggplot2.R>         |
 
 ### Parte prática
 
@@ -64,6 +66,7 @@ Fora do horário de aula ou monitoria:
 |    3 | [Exercícios — Selecionando colunas](https://livro.curso-r.com/7-2-dplyr.html#exerc%C3%ADcios-11)         |
 |    3 | [Exercícios — Ordenando a base](https://livro.curso-r.com/7-2-dplyr.html#exerc%C3%ADcios-12)             |
 |    3 | [Exercícios — Pipe](https://livro.curso-r.com/6-1-o-operador-pipe.html#exerc%C3%ADcios-10)               |
+|    5 | [Exercícios — ggplot2](https://livro.curso-r.com/8-1-o-pacote-ggplot2.html#exerc%C3%ADcios-17)           |
 
 ## Lição de casa extra 🤓
 
@@ -103,6 +106,8 @@ Referências extras comentadas nas aulas.
 |    4 | Joins - Unindo bases | [Tidyexplain - Ilustrações sobre joins](https://www.garrickadenbuie.com/project/tidyexplain/)                                                                      |
 |    4 | Joins - Unindo bases | [Documentação sobre joins](https://dplyr.tidyverse.org/reference/join.html)                                                                                        |
 |    4 | Fatores              | [Folha de cola (cheatsheet): forcats](https://raw.githubusercontent.com/rstudio/cheatsheets/master/factors.pdf)                                                    |
+|    5 | Gráficos             | [Folha de cola (cheatsheet): ggplot2](https://raw.githubusercontent.com/rstudio/cheatsheets/master/translations/portuguese/ggplot2-cheatsheet-portuguese.pdf)      |
+|    5 | Gráficos             | [Capítulo do livro “Ciência de Dados em R”: Gráficos](https://livro.curso-r.com/8-graficos.html)                                                                   |
 
 Materiais que comentamos quando tiramos dúvidas (não necessariamente são
 relacionadas com o conteúdo da aula).
