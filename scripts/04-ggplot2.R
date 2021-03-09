@@ -5,7 +5,7 @@ library(tidyverse)
 
 # Ler base IMDB -----------------------------------------------------------
 
-imdb <- read_rds("dados/imdb.rds")
+imdb <- readr::read_rds("dados/imdb.rds")
 
 imdb <- imdb %>% mutate(lucro = receita - orcamento)
 
@@ -23,13 +23,19 @@ p <- imdb %>%
 # Gráfico de dispersão da receita contra o orçamento
 imdb %>% 
   ggplot() +
-  geom_point(aes(x = orcamento, y = receita))
+  geom_point(mapping = aes(x = orcamento, y = receita))
 
 # Inserindo a reta x = y
 imdb %>%
   ggplot() +
   geom_point(aes(x = orcamento, y = receita)) +
   geom_abline(intercept = 0, slope = 1, color = "red")
+
+# y = a + b*x
+# 
+# y = 0 + 1*x
+# 
+# y = x
 
 # Observe como cada elemento é uma camada do gráfico.
 # Agora colocamos a camada da linha antes da camada
@@ -42,7 +48,7 @@ imdb %>%
 # Atribuindo a variável lucro aos pontos
 imdb %>%
   ggplot() +
-  geom_point(aes(x = orcamento, y = receita, color = lucro))
+  geom_point(mapping = aes(x = orcamento, y = receita, color = lucro))
 
 # Categorizando o lucro antes
 imdb %>%
@@ -50,18 +56,30 @@ imdb %>%
     lucrou = ifelse(lucro <= 0, "Não", "Sim")
   ) %>%
   ggplot() +
-  geom_point(aes(x = orcamento, y = receita, color = lucrou))
+  geom_point(aes(x = orcamento, y = receita, shape = lucrou, color = lucrou))
 
 # Salvando um gráfico em um arquivo
-imdb %>%
+p <- imdb %>%
+  filter(!is.na(lucro)) %>% 
   mutate(
-    lucrou = ifelse(lucro <= 0, "Não", "Sim")
+    lucrou = ifelse(lucro <= 0, "Não", "Sim"),
   ) %>%
   ggplot() +
   geom_point(aes(x = orcamento, y = receita, color = lucrou))
 
-ggsave("meu_grafico.png")
+ggsave("meu_grafico.png", plot = p, width = 20, height = 20)
 
+# sem gerar o objeto p, salva o último grafico gerado
+
+imdb %>%
+  filter(!is.na(lucro)) %>% 
+  mutate(
+    lucrou = ifelse(lucro <= 0, "Não", "Sim"),
+  ) %>%
+  ggplot() +
+  geom_point(aes(x = orcamento, y = receita, color = lucrou))
+
+ggsave("meu_grafico.png", width = 20, height = 20)
 
 # Filosofia ---------------------------------------------------------------
 
