@@ -135,8 +135,8 @@ imdb %>%
   group_by(ano) %>% 
   summarise(nota_media = mean(nota_imdb, na.rm = TRUE)) %>% 
   ggplot(aes(x = ano, y = nota_media)) +
-  geom_line() +
-  geom_point()
+  geom_line(color = "#59d97b", linetype = 4) +
+  geom_point(color = "purple", shape = 4)
 
 # Colocando as notas no gráfico
 imdb %>% 
@@ -148,15 +148,15 @@ imdb %>%
   geom_line() +
   geom_label(aes(label = nota_media))
 
-
 # Gráfico de barras -------------------------------------------------------
 
 # Número de filmes dos diretores da base
 imdb %>% 
+  filter(!is.na(diretor)) %>% 
   count(diretor) %>%
   top_n(10, n) %>%
   ggplot() +
-  geom_col(aes(x = diretor, y = n))
+  geom_col(aes(y = diretor, x = n))
 
 # Tirando NA e pintando as barras
 imdb %>% 
@@ -165,7 +165,8 @@ imdb %>%
   top_n(10, n) %>%
   ggplot() +
   geom_col(
-    aes(x = diretor, y = n),
+    aes(y = diretor, x = n, fill = diretor),
+    color= "black",
     show.legend = FALSE
   )
 
@@ -180,6 +181,11 @@ imdb %>%
     show.legend = FALSE
   ) 
   
+# stringr: texto
+# forcats: fatores
+# lubridate: datas
+
+library(forcats)
 
 # Ordenando as barras
 imdb %>% 
@@ -187,7 +193,7 @@ imdb %>%
   filter(!is.na(diretor)) %>% 
   top_n(10, n) %>%
   mutate(
-    diretor = forcats::fct_reorder(diretor, n)
+    diretor = fct_reorder(diretor, n)
   ) %>% 
   ggplot() +
   geom_col(
@@ -210,7 +216,7 @@ top_10_diretores %>%
     aes(x = n, y = diretor),
     show.legend = FALSE
   ) +
-  geom_label(aes(x = n/2, y = diretor, label = n)) 
+  geom_label(aes(x = n + 1, y = diretor, label = n)) 
 
 
 # Histogramas e boxplots --------------------------------------------------
@@ -246,11 +252,17 @@ imdb %>%
   filter(!is.na(diretor)) %>%
   group_by(diretor) %>% 
   filter(n() >= 15) %>% 
-  ungroup() %>% 
-  mutate(diretor = forcats::fct_reorder(diretor, lucro, na.rm = TRUE)) %>% 
+  # ungroup() %>%
+  mutate(
+    diretor = forcats::fct_reorder(
+      diretor, lucro, .fun = median, na.rm = TRUE, .desc = TRUE) 
+  ) %>% 
   ggplot() +
-  geom_boxplot(aes(x = diretor, y = lucro))
+  geom_boxplot(aes(x = diretor, y = lucro)) +
+  geom_jitter(aes(x = diretor, y = lucro), alpha = 0.5)
+  # geom_label(aes(x = diretor, y = mediana, label = mean(lucro, na.rm = TRUE)))
 
+# Q1 - 3 / 2 (Q3 - Q1) --- Q3 + 3 / 2 (Q3 - Q1)
 
 # Título e labels ---------------------------------------------------------
 
@@ -298,7 +310,9 @@ imdb %>%
     stat = "identity",
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = c("orange", "royalblue", "purple", "salmon", "darkred"))
+  scale_fill_manual(
+    values = c("orange", "royalblue", "purple", "salmon", "darkred")
+  )
 # http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
 
 # Escolhendo pelo hexadecimal
@@ -316,6 +330,9 @@ imdb %>%
     values = c("#ff4500", "#268b07", "#ff7400", "#abefaf", "#33baba")
   )
 
+imdb %>% 
+  ggplot() +
+  geom_bar(aes(x = cor))
 
 
 # Mudando textos da legenda
@@ -338,10 +355,10 @@ imdb %>%
 imdb %>% 
   ggplot() +
   geom_point(mapping = aes(x = orcamento, y = receita)) +
-  # theme_bw() 
-  # theme_classic() 
-  # theme_dark()
-  theme_minimal()
+  # theme_bw()
+  # theme_classic()
+  theme_dark()
+  # theme_minimal()
 
 # A função theme()
 imdb %>% 
@@ -352,6 +369,9 @@ imdb %>%
     subtitle = "Receita vs Orçamento"
   ) +
   theme(
-    plot.title = element_text(hjust = 0.5),
+    plot.title = element_text(hjust = 0.5, color= "orange"),
     plot.subtitle = element_text(hjust = 0.5)
   )
+
+
+
