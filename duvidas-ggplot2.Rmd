@@ -1,0 +1,52 @@
+---
+title: "Dúvidas da aula de ggplot2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+
+# Carregar pacotes --------------------------------------------------------
+
+library(tidyverse)
+
+# Ler base IMDB -----------------------------------------------------------
+
+imdb <- read_rds("dados/imdb.rds")
+
+imdb <- imdb %>% mutate(lucro = receita - orcamento)
+
+dplyr::starwars %>% View()
+```
+
+
+C. para Todos (9:06 PM)
+Como gerar a porcentagem no gráfico de filmes lucrativos ou não?
+
+cghion para mim (Mensagem direta) (9:31 PM)
+Separei a variável lucrou em quatro faixas. Tem como organizar a legenda na ordem que eu desejo e associar cores que eu desejo?
+```{r}
+imdb %>%
+  mutate(lucrou = ifelse(
+    lucro <= 0,
+    "Não",
+    ifelse(
+      lucro / receita <= 0.5,
+      "Razoável",
+      ifelse(lucro / receita <= 0.75, "Bom", "Muito bom")
+    )
+  )) %>%
+  ggplot() +
+  geom_point(aes(
+    x = orcamento,
+    y = receita,
+    color = lucrou,
+    shape = classificacao
+  ))
+```
+

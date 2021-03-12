@@ -109,10 +109,12 @@ Referências extras comentadas nas aulas.
 |    5 | Comunidades          | [R Brasil - Grupo no telegram](https://t.me/rbrasiloficial)                                                                                                        |
 |    5 | Comunidades          | [Apresentação sobre a R-Ladies São Paulo](https://r-ladies-sao-paulo.github.io/RLadiesTheme/)                                                                      |
 |    5 | Comunidades          | [Capítulos da R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)                                                                            |
+|    5 | Boas práticas        | [Capítulo do livro “Zen do R”:  .RData e .Rhistory](https://curso-r.github.io/zen-do-r/rdata-rhistory.html)                                                        |
 |    5 | Comunidades          | [Pacote dados - Base de dados traduzidas](https://cienciadedatos.github.io/dados/)                                                                                 |
 |    4 | Fatores              | [Folha de cola (cheatsheet): forcats](https://raw.githubusercontent.com/rstudio/cheatsheets/master/factors.pdf)                                                    |
 |    5 | Gráficos             | [Folha de cola (cheatsheet): ggplot2](https://raw.githubusercontent.com/rstudio/cheatsheets/master/translations/portuguese/ggplot2-cheatsheet-portuguese.pdf)      |
 |    5 | Gráficos             | [Capítulo do livro “Ciência de Dados em R”: Gráficos](https://livro.curso-r.com/8-graficos.html)                                                                   |
+|    5 | Gráficos             | [Documentação da base sobre StarWars](https://dplyr.tidyverse.org/reference/starwars.html)                                                                         |
 
 Materiais que comentamos quando tiramos dúvidas (não necessariamente são
 relacionadas com o conteúdo da aula).
