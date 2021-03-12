@@ -15,7 +15,7 @@ library(magrittr)
 
 main_repo <- "main-r4ds-1"
 turma <- "202102-r4ds-1"
-num_aula <- 5
+num_aula <- 6
 ```
 
 
@@ -45,8 +45,8 @@ knitr::kable(
     slide = CursoRutils:::list_github_files(main_repo, "slides/", "html"),
     link = paste0("https://curso-r.github.io/", main_repo, "/", slide)
   ) %>% 
-    dplyr::filter(!stringr::str_detect(slide, "_files/")) %>% 
-    dplyr::slice(1:5)
+    dplyr::filter(!stringr::str_detect(slide, "_files/")) #%>% 
+   # dplyr::slice(1:6)
 )
 ```
 

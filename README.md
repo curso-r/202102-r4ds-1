@@ -7,26 +7,26 @@
 aqui](https://github.com/curso-r/main-r4ds-1/raw/master/material_do_curso.zip)
 para baixar o material do curso.
 
-  - Nosso livro **Ciência de Dados em R**: <https://livro.curso-r.com/>
+-   Nosso livro **Ciência de Dados em R**: <https://livro.curso-r.com/>
 
-  - R for Data Science: <https://r4ds.had.co.nz/> (em inglês) e
+-   R for Data Science: <https://r4ds.had.co.nz/> (em inglês) e
     <https://es.r4ds.hadley.nz/> (em espanhol).
 
-  - Nosso blog: <https://curso-r.com/blog/>
+-   Nosso blog: <https://curso-r.com/blog/>
 
 ## Dúvidas
 
 Fora do horário de aula ou monitoria:
 
-  - perguntas gerais sobre o curso deverão ser feitas no Classroom.
+-   perguntas gerais sobre o curso deverão ser feitas no Classroom.
 
-  - perguntas sobre R, principalmente as que envolverem código, deverão
+-   perguntas sobre R, principalmente as que envolverem código, deverão
     ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
 
 ## Slides
 
 | slide                              | link                                                                       |
-| :--------------------------------- | :------------------------------------------------------------------------- |
+|:-----------------------------------|:---------------------------------------------------------------------------|
 | slides/01-introducao-ao-curso.html | <https://curso-r.github.io/main-r4ds-1/slides/01-introducao-ao-curso.html> |
 | slides/02-introducao-ao-r.html     | <https://curso-r.github.io/main-r4ds-1/slides/02-introducao-ao-r.html>     |
 | slides/03-importacao.html          | <https://curso-r.github.io/main-r4ds-1/slides/03-importacao.html>          |
@@ -38,7 +38,7 @@ Fora do horário de aula ou monitoria:
 ### Parte teórica
 
 | script               | link                                                                   |
-| :------------------- | :--------------------------------------------------------------------- |
+|:---------------------|:-----------------------------------------------------------------------|
 | 01-introducao-ao-R.R | <https://curso-r.github.io/202102-r4ds-1/scripts/01-introducao-ao-R.R> |
 | 02-importacao.R      | <https://curso-r.github.io/202102-r4ds-1/scripts/02-importacao.R>      |
 | 03-manipulacao.R     | <https://curso-r.github.io/202102-r4ds-1/scripts/03-manipulacao.R>     |
@@ -47,17 +47,18 @@ Fora do horário de aula ou monitoria:
 ### Parte prática
 
 | script             | link                                                                 |
-| :----------------- | :------------------------------------------------------------------- |
+|:-------------------|:---------------------------------------------------------------------|
 | aula-2.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-2.R>           |
 | aula-3-exemplo-2.R | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-3-exemplo-2.R> |
 | aula-3.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-3.R>           |
 | aula-4.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-4.R>           |
 | aula-5.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-5.R>           |
+| aula-6.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-6.R>           |
 
 ## Lição de casa
 
 | Aula | Descrição                                                                                                |
-| ---: | :------------------------------------------------------------------------------------------------------- |
+|-----:|:---------------------------------------------------------------------------------------------------------|
 |    1 | [Exercícios — R como calculadora](https://livro.curso-r.com/3-2-r-como-calculadora.html#exerc%C3%ADcios) |
 |    1 | [Exercícios — Objetos](https://livro.curso-r.com/3-3-objetosfuncoes#exerc%C3%ADcios-1)                   |
 |    1 | [Ler a seção Vetores do nosso livro](https://livro.curso-r.com/3-6-vetores.html)                         |
@@ -72,7 +73,7 @@ Fora do horário de aula ou monitoria:
 ## Lição de casa extra 🤓
 
 | Aula | Descrição                                                                                                               |
-| ---: | :---------------------------------------------------------------------------------------------------------------------- |
+|-----:|:------------------------------------------------------------------------------------------------------------------------|
 |    1 | [Ler o Capítulo 2 - RStudio do nosso livro](https://livro.curso-r.com/2-rstudio.html)                                   |
 |    1 | [Ler as seções 3.4 à 3.10 do nosso livro](https://livro.curso-r.com/3-4-data-frames.html)                               |
 |    1 | [Fazer exercícios das seções 3.7, 3.8 e 3.10](https://livro.curso-r.com/3-7-testes-l%C3%B3gicos.html#exerc%C3%ADcios-4) |
@@ -83,7 +84,7 @@ Fora do horário de aula ou monitoria:
 Referências extras comentadas nas aulas.
 
 | Aula | Tema                 | Descrição                                                                                                                                                          |
-| ---: | :------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----:|:---------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    0 | Instalação           | [Capítulo do livro “Ciência de Dados em R”: Instalação](https://livro.curso-r.com/1-instalacao.html)                                                               |
 |    1 | Comunidades          | [R-Ladies - Dashboard](https://benubah.github.io/r-community-explorer/rladies.html)                                                                                |
 |    1 | Comunidades          | [AI Inclusive](https://www.ai-inclusive.org/)                                                                                                                      |
@@ -115,12 +116,22 @@ Referências extras comentadas nas aulas.
 |    5 | Gráficos             | [Folha de cola (cheatsheet): ggplot2](https://raw.githubusercontent.com/rstudio/cheatsheets/master/translations/portuguese/ggplot2-cheatsheet-portuguese.pdf)      |
 |    5 | Gráficos             | [Capítulo do livro “Ciência de Dados em R”: Gráficos](https://livro.curso-r.com/8-graficos.html)                                                                   |
 |    5 | Gráficos             | [Documentação da base sobre StarWars](https://dplyr.tidyverse.org/reference/starwars.html)                                                                         |
+|    6 | Gráficos             | [Pacote ggrepel - afastar as anotações (labels)](https://ggrepel.slowkow.com/)                                                                                     |
+|    6 | Gráficos             | [Pacote plotly](https://plotly.com/ggplot2/)                                                                                                                       |
+|    6 | Gráficos             | [Pacote gghighlight - realçando pontos](https://blog.curso-r.com/posts/2020-02-20-gghighlight/)                                                                    |
+|    6 | Gráficos             | [Galeria de extensões para o ggplot2](https://exts.ggplot2.tidyverse.org/gallery/)                                                                                 |
+|    6 | Gráficos             | [Dicas para formatar gráficos](https://www.curso-r.com/blog/2020-17-02-dicas-relatorios-r4ds1_graficos/)                                                           |
+|    6 | Gráficos             | [Cores no R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)                                                                                                |
+|    6 | Gráficos             | [Documentação do ggplot2](https://ggplot2.tidyverse.org/reference/index.html)                                                                                      |
+|    6 | Gráficos             | [Ferramenta para buscar as cores em hex](https://htmlcolorcodes.com/)                                                                                              |
+|    6 | Gráficos             | [Pacote ggrepel - afastar as anotações (labels)](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html)                                           |
+|    6 | Fatores              | [Capítulo do livro “Ciência de Dados em R”: 3.13.2 Fatores](https://livro.curso-r.com/3-13-outros-t%C3%B3picos.html)                                               |
 
 Materiais que comentamos quando tiramos dúvidas (não necessariamente são
 relacionadas com o conteúdo da aula).
 
 | Aula | Tema             | Descrição                                                                                                                                         |
-| ---: | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+|-----:|:-----------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
 |    2 | Conversa/Dúvidas | [(Pentaho) R on Pentaho Data Integration (PDI)](https://support.pentaho.com/hc/article_attachments/360005005891/Integrating%20R%20with%20PDI.pdf) |
 |    2 | Conversa/Dúvidas | [(Shiny) Exemplo de aplicação em Shiny – Instituto Sou da Paz](https://sdpa.shinyapps.io/sdpa/)                                                   |
 |    2 | Conversa/Dúvidas | [(Git) Livro Zen do R: Git e GitHub](https://curso-r.github.io/zen-do-r/git-github.html)                                                          |
@@ -128,6 +139,7 @@ relacionadas com o conteúdo da aula).
 |    2 | Conversa/Dúvidas | [(Git) Playlist de videos sobre a Hacktoberfest – R-Ladies São Paulo](https://www.youtube.com/playlist?list=PLufjVrrUAoSdny-WECY4Gr2pn5OQGG_FN)   |
 |    2 | Conversa/Dúvidas | [(Importação de PDFs) Post {tabulizer}: Tabela do PDF para data.frame em segundos](https://blog.curso-r.com/posts/2021-01-08-tabulizer/)          |
 |    3 | Conversa/Dúvidas | [API para enviar e-mails](https://sendgrid.com/)                                                                                                  |
+|    6 | Conversa/Dúvidas | [Folha de cola: Regular Expressions](https://cheatography.com//davechild/cheat-sheets/regular-expressions/pdf/)                                   |
 
 ## Redes sociais da Curso-R
 
