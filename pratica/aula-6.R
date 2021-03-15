@@ -88,3 +88,48 @@ starwars %>%
     )
   )
 
+# Dúvida no final da aula 7
+
+imdb %>%
+  filter(!is.na(diretor)) %>% 
+  mutate(lucro = receita - orcamento) %>% 
+  group_by(diretor) %>% 
+  top_n(1, lucro) %>% 
+  ungroup() %>% 
+  arrange(desc(lucro)) %>% 
+  slice(1:15)
+
+# generalizando
+
+calculo_top_15_lucro <- function(x) {
+  imdb %>%
+    # filter(!is.na(x)) %>% 
+    mutate(lucro = receita - orcamento) %>% 
+    group_by(.data[[x]]) %>% 
+    top_n(1, lucro) %>% 
+    ungroup() %>% 
+    arrange(desc(lucro)) %>% 
+    slice(1:15)
+} 
+
+calculo_top_15_lucro("diretor")
+
+calculo_top_15_lucro <- function(x) {
+  imdb %>%
+    drop_na({{x}}) %>% 
+    mutate(lucro = receita - orcamento) %>% 
+    group_by({{x}}) %>% 
+    top_n(1, lucro) %>% 
+    ungroup() %>% 
+    arrange(desc(lucro)) %>% 
+    slice(1:15)
+}
+
+calculo_top_15_lucro(diretor)
+
+
+
+
+
+
+
