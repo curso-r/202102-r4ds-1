@@ -64,6 +64,11 @@ dados_brasil <- dados_brasil_arrumado %>%
 names(dados_brasil)
 glimpse(dados_brasil)
 
+# Salvar a base de dados
+
+readr::write_csv2(x = dados_brasil, file = "pratica/dados_brasil.csv")
+
+
 # Usando manipulação de dados ----------------
 ## Qual é o estado com a maior população estimada? -------
 

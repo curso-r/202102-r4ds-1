@@ -8,6 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+Essa pergunta foi enviada na aula sobre ggplot2, no curso R para Ciência de Dados I.
 
 ```{r}
 
@@ -21,15 +22,14 @@ imdb <- read_rds("dados/imdb.rds")
 
 imdb <- imdb %>% mutate(lucro = receita - orcamento)
 
-dplyr::starwars %>% View()
 ```
 
 
 C. para Todos (9:06 PM)
-Como gerar a porcentagem no gráfico de filmes lucrativos ou não?
+[respondido]Como gerar a porcentagem no gráfico de filmes lucrativos ou não?
 
 cghion para mim (Mensagem direta) (9:31 PM)
-Separei a variável lucrou em quatro faixas. Tem como organizar a legenda na ordem que eu desejo e associar cores que eu desejo?
+(respondido)Separei a variável lucrou em quatro faixas. Tem como organizar a legenda na ordem que eu desejo e associar cores que eu desejo?
 ```{r}
 imdb %>%
   mutate(lucrou = ifelse(
@@ -50,3 +50,57 @@ imdb %>%
   ))
 ```
 
+
+R. F. para Todos (7:09 PM)
+[DISCOURSE]will, se quero fazer um gráfico para representar um modelo de regressão é melhor usar o geom_smooth() ou o abline com o valor do intercepto que consegui rodando o modelo?
+
+
+R. F. para Todos (7:22 PM)
+[DISCOURSE]você pode demonstrar depois como fazer um gráfico de barra com IC?
+
+
+F. N. para Todos (7:22 PM)
+respondido - como escrever todos anos no gráfico no eixo horizontal ?
+# scale_x_continuous()
+
+Sara A. para mim (Mensagem direta) (7:25 PM)
+[discourse'] Seria possível atribuir uma cor para quando o gráfico subisse e outra cor para quando caísse?
+
+respondido - Natasha Alvarez para Todos (7:36 PM)
+Não dá para você dar um “zoom” nos y-values de 5.5 a 7?
+#coord_cartesian()
+
+Saulo dos Santos Gil para Todos (7:36 PM)
+Não dá para colocar as a linha nos eixos?
+
+Breno Marques para Todos (7:37 PM)
+tem o position = position.dodge(x)
+que afasta os points. não sei se serve pra todo geom
+
+
+Sara Alves para mim (Mensagem direta) (7:45 PM)
+respondido - Se eu quisesse atribuir um nome para a variável N... Como faria?
+
+
+Guilherme Bride Fernandes para Todos (8:16 PM)
+[respondido]Consigo mudar essa palheta de cores?
+
+Alexandre Cabanas para Todos (8:17 PM)
+[Discourse]Como destacaria apenas com uma cor alguma barra?
+
+
+Saulo dos Santos Gil para Todos (8:45 PM)
+respondido - Dá inserir a média no boxplot?
+respondido - e os dados individuais?
+
+Saulo dos Santos Gil para Todos (8:47 PM)
+respondido -o R define o outlier como acima/abaixo de 2 desvios padrão?
+
+[respondido]cghion para mim (Mensagem direta) (9:14 PM)
+Como deixar a cor fixa por diretor?
+cghion para mim (Mensagem direta) (9:16 PM)
+Acho que não, se um diretor sair da análise outro diretor assumirá a cor dele.
+De mim para cghion (Mensagem direta) (9:18 PM)
+Ah, você quer sempre que sempre seja o mesmo independente da Analise? o problema é que temos muitos diretores, teria que ter uma cor para cada um.. vou anotar a duvida para os cases
+cghion para mim (Mensagem direta) (9:19 PM)
+Sim, é isso, mas seria para uma variável com menos níveis. Por exemplo a coluna classificação.
