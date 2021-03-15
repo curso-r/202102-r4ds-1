@@ -15,7 +15,7 @@ library(magrittr)
 
 main_repo <- "main-r4ds-1"
 turma <- "202102-r4ds-1"
-num_aula <- 6
+num_aula <- 7
 ```
 
 
@@ -106,10 +106,10 @@ Referências extras comentadas nas aulas.
 
 ```{r}
 readxl::read_excel("referencias_extras.xlsx") %>%
-  dplyr::filter(aula <= num_aula, tema != "Conversa/Dúvidas") %>% 
+  dplyr::filter(aula <= num_aula, !tema %in% c("Conversa/Dúvidas", "Dúvidas Discourse")) %>% 
   dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
   dplyr::select(-desc, -url) %>%
-  dplyr::arrange(num_aula) %>% 
+  dplyr::arrange(aula) %>% 
   knitr::kable(col.names = c("Aula", "Tema", "Descrição"))
 ```
 
@@ -118,6 +118,16 @@ Materiais que comentamos quando tiramos dúvidas (não necessariamente são rela
 ```{r}
 readxl::read_excel("referencias_extras.xlsx") %>%
   dplyr::filter(aula <= num_aula, tema == "Conversa/Dúvidas") %>% 
+  dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
+  dplyr::select(-desc, -url) %>%
+  knitr::kable(col.names = c("Aula", "Tema", "Descrição"))
+```
+
+Dúvidas enviadas e postadas no [Fórum da Curso-R](https://discourse.curso-r.com/). 
+
+```{r}
+readxl::read_excel("referencias_extras.xlsx") %>%
+  dplyr::filter(aula <= num_aula, tema == "Dúvidas Discourse") %>% 
   dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
   dplyr::select(-desc, -url) %>%
   knitr::kable(col.names = c("Aula", "Tema", "Descrição"))

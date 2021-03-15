@@ -107,12 +107,12 @@ Referências extras comentadas nas aulas.
 |    4 | Manipulação de bases | [Pacote dbplyr: dplyr para quem usa SQL](https://dbplyr.tidyverse.org/articles/translation-verb.html)                                                              |
 |    4 | Joins - Unindo bases | [Tidyexplain - Ilustrações sobre joins](https://www.garrickadenbuie.com/project/tidyexplain/)                                                                      |
 |    4 | Joins - Unindo bases | [Documentação sobre joins](https://dplyr.tidyverse.org/reference/join.html)                                                                                        |
+|    4 | Fatores              | [Folha de cola (cheatsheet): forcats](https://raw.githubusercontent.com/rstudio/cheatsheets/master/factors.pdf)                                                    |
 |    5 | Comunidades          | [R Brasil - Grupo no telegram](https://t.me/rbrasiloficial)                                                                                                        |
 |    5 | Comunidades          | [Apresentação sobre a R-Ladies São Paulo](https://r-ladies-sao-paulo.github.io/RLadiesTheme/)                                                                      |
 |    5 | Comunidades          | [Capítulos da R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)                                                                            |
 |    5 | Boas práticas        | [Capítulo do livro “Zen do R”:  .RData e .Rhistory](https://curso-r.github.io/zen-do-r/rdata-rhistory.html)                                                        |
 |    5 | Comunidades          | [Pacote dados - Base de dados traduzidas](https://cienciadedatos.github.io/dados/)                                                                                 |
-|    4 | Fatores              | [Folha de cola (cheatsheet): forcats](https://raw.githubusercontent.com/rstudio/cheatsheets/master/factors.pdf)                                                    |
 |    5 | Gráficos             | [Folha de cola (cheatsheet): ggplot2](https://raw.githubusercontent.com/rstudio/cheatsheets/master/translations/portuguese/ggplot2-cheatsheet-portuguese.pdf)      |
 |    5 | Gráficos             | [Capítulo do livro “Ciência de Dados em R”: Gráficos](https://livro.curso-r.com/8-graficos.html)                                                                   |
 |    5 | Gráficos             | [Documentação da base sobre StarWars](https://dplyr.tidyverse.org/reference/starwars.html)                                                                         |
@@ -120,12 +120,16 @@ Referências extras comentadas nas aulas.
 |    6 | Gráficos             | [Pacote plotly](https://plotly.com/ggplot2/)                                                                                                                       |
 |    6 | Gráficos             | [Pacote gghighlight - realçando pontos](https://blog.curso-r.com/posts/2020-02-20-gghighlight/)                                                                    |
 |    6 | Gráficos             | [Galeria de extensões para o ggplot2](https://exts.ggplot2.tidyverse.org/gallery/)                                                                                 |
-|    6 | Gráficos             | [Dicas para formatar gráficos](https://www.curso-r.com/blog/2020-17-02-dicas-relatorios-r4ds1_graficos/)                                                           |
 |    6 | Gráficos             | [Cores no R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)                                                                                                |
 |    6 | Gráficos             | [Documentação do ggplot2](https://ggplot2.tidyverse.org/reference/index.html)                                                                                      |
 |    6 | Gráficos             | [Ferramenta para buscar as cores em hex](https://htmlcolorcodes.com/)                                                                                              |
 |    6 | Gráficos             | [Pacote ggrepel - afastar as anotações (labels)](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html)                                           |
 |    6 | Fatores              | [Capítulo do livro “Ciência de Dados em R”: 3.13.2 Fatores](https://livro.curso-r.com/3-13-outros-t%C3%B3picos.html)                                               |
+|    7 | Trabalho Final       | [Dicas para formatar tabelas](https://www.curso-r.com/blog/2020-12-03-dicas-relatorios-r4ds1_tabelas/)                                                             |
+|    7 | Trabalho Final       | [Dicas para formatar gráficos](https://www.curso-r.com/blog/2020-17-02-dicas-relatorios-r4ds1_graficos/)                                                           |
+|    7 | Trabalho Final       | [Dicas para elaborar relatórios](https://blog.curso-r.com/)                                                                                                        |
+|    7 | Relatórios           | [Capítulo do livro “Ciência de Dados em R”: Relatórios](https://livro.curso-r.com/9-relatorios.html)                                                               |
+|    7 | Relatórios           | [Cheatsheet RMarkdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)                                                                 |
 
 Materiais que comentamos quando tiramos dúvidas (não necessariamente são
 relacionadas com o conteúdo da aula).
@@ -140,6 +144,17 @@ relacionadas com o conteúdo da aula).
 |    2 | Conversa/Dúvidas | [(Importação de PDFs) Post {tabulizer}: Tabela do PDF para data.frame em segundos](https://blog.curso-r.com/posts/2021-01-08-tabulizer/)          |
 |    3 | Conversa/Dúvidas | [API para enviar e-mails](https://sendgrid.com/)                                                                                                  |
 |    6 | Conversa/Dúvidas | [Folha de cola: Regular Expressions](https://cheatography.com//davechild/cheat-sheets/regular-expressions/pdf/)                                   |
+
+Dúvidas enviadas e postadas no [Fórum da
+Curso-R](https://discourse.curso-r.com/).
+
+| Aula | Tema              | Descrição                                                                                                                                                         |
+|-----:|:------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    6 | Dúvidas Discourse | [Representação gráfica do modelo de regressão linear](https://discourse.curso-r.com/t/representacao-grafica-do-modelo-de-regressao-linear/1021)                   |
+|    6 | Dúvidas Discourse | [Representar intervalo de confiança em um gráfico com ggplot2](https://discourse.curso-r.com/t/representar-intervalo-de-confianca-em-um-grafico-com-ggplot2/1022) |
+|    6 | Dúvidas Discourse | [Atribuição de cores em um gráfico com ggplot2](https://discourse.curso-r.com/t/atribuicao-de-cores-em-um-grafico-com-ggplot2/1025)                               |
+|    6 | Dúvidas Discourse | [Colorir apenas uma barra do gráfico com ggplot2](https://discourse.curso-r.com/t/colorir-apenas-uma-barra-do-grafico-com-ggplot2/1026)                           |
+|    6 | Dúvidas Discourse | [Manipulação de dados para fazer um boxplot com ggplot2](https://discourse.curso-r.com/t/manipulacao-de-dados-para-fazer-um-boxplot-com-ggplot2/1027/2)           |
 
 ## Redes sociais da Curso-R
 
