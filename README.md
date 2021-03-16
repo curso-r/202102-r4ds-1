@@ -37,23 +37,28 @@ Fora do horário de aula ou monitoria:
 
 ### Parte teórica
 
-| script               | link                                                                   |
-|:---------------------|:-----------------------------------------------------------------------|
-| 01-introducao-ao-R.R | <https://curso-r.github.io/202102-r4ds-1/scripts/01-introducao-ao-R.R> |
-| 02-importacao.R      | <https://curso-r.github.io/202102-r4ds-1/scripts/02-importacao.R>      |
-| 03-manipulacao.R     | <https://curso-r.github.io/202102-r4ds-1/scripts/03-manipulacao.R>     |
-| 04-ggplot2.R         | <https://curso-r.github.io/202102-r4ds-1/scripts/04-ggplot2.R>         |
+| script                   | link                                                                       |
+|:-------------------------|:---------------------------------------------------------------------------|
+| 01-introducao-ao-R.R     | <https://curso-r.github.io/202102-r4ds-1/scripts/01-introducao-ao-R.R>     |
+| 02-importacao.R          | <https://curso-r.github.io/202102-r4ds-1/scripts/02-importacao.R>          |
+| 03-manipulacao.R         | <https://curso-r.github.io/202102-r4ds-1/scripts/03-manipulacao.R>         |
+| 04-ggplot2.R             | <https://curso-r.github.io/202102-r4ds-1/scripts/04-ggplot2.R>             |
+| 05-rmarkdown.Rmd         | <https://curso-r.github.io/202102-r4ds-1/scripts/05-rmarkdown.Rmd>         |
+| 06-exemplo-relatorio.Rmd | <https://curso-r.github.io/202102-r4ds-1/scripts/06-exemplo-relatorio.Rmd> |
 
 ### Parte prática
 
-| script             | link                                                                 |
-|:-------------------|:---------------------------------------------------------------------|
-| aula-2.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-2.R>           |
-| aula-3-exemplo-2.R | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-3-exemplo-2.R> |
-| aula-3.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-3.R>           |
-| aula-4.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-4.R>           |
-| aula-5.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-5.R>           |
-| aula-6.R           | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-6.R>           |
+| script                                | link                                                                                  |
+|:--------------------------------------|:--------------------------------------------------------------------------------------|
+| aula-2.R                              | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-2.R>                            |
+| aula-3-exemplo-2.R                    | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-3-exemplo-2.R>                  |
+| aula-3.R                              | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-3.R>                            |
+| aula-4.R                              | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-4.R>                            |
+| aula-5.R                              | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-5.R>                            |
+| aula-6.R                              | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-6.R>                            |
+| aula-7.Rmd                            | <https://curso-r.github.io/202102-r4ds-1/pratica/aula-7.Rmd>                          |
+| exemplo\_prettydoc.Rmd                | <https://curso-r.github.io/202102-r4ds-1/pratica/exemplo_prettydoc.Rmd>               |
+| ibge-brasil-relatorio\_com\_geobr.Rmd | <https://curso-r.github.io/202102-r4ds-1/pratica/ibge-brasil-relatorio_com_geobr.Rmd> |
 
 ## Lição de casa
 
@@ -127,9 +132,22 @@ Referências extras comentadas nas aulas.
 |    6 | Fatores              | [Capítulo do livro “Ciência de Dados em R”: 3.13.2 Fatores](https://livro.curso-r.com/3-13-outros-t%C3%B3picos.html)                                               |
 |    7 | Trabalho Final       | [Dicas para formatar tabelas](https://www.curso-r.com/blog/2020-12-03-dicas-relatorios-r4ds1_tabelas/)                                                             |
 |    7 | Trabalho Final       | [Dicas para formatar gráficos](https://www.curso-r.com/blog/2020-17-02-dicas-relatorios-r4ds1_graficos/)                                                           |
-|    7 | Trabalho Final       | [Dicas para elaborar relatórios](https://blog.curso-r.com/)                                                                                                        |
+|    7 | Trabalho Final       | [Dicas para elaborar relatórios](https://blog.curso-r.com/posts/2021-03-15-dicas-relatorios-r4ds1_relatorios/)                                                     |
 |    7 | Relatórios           | [Capítulo do livro “Ciência de Dados em R”: Relatórios](https://livro.curso-r.com/9-relatorios.html)                                                               |
 |    7 | Relatórios           | [Cheatsheet RMarkdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)                                                                 |
+|    7 | Comunidades          | [Curso-R Entrevista - Adriana Silva](https://www.youtube.com/watch?v=QAv8566nHEk)                                                                                  |
+|    7 | Relatórios           | [Netlify Drop](https://app.netlify.com/drop)                                                                                                                       |
+|    7 | Relatórios           | [Knitr: mudando o diretório de trabalho](https://blog.curso-r.com/posts/2017-03-25-knitr-mudando-diretorio-de-trabalho/)                                           |
+|    7 | Caminhos             | [Pacote here](https://here.r-lib.org/)                                                                                                                             |
+|    7 | Relatórios           | [Pacote xaringan: Addin infinite moon reader](https://github.com/yihui/xaringan)                                                                                   |
+|    7 | Relatórios           | [Pacote prettydoc](https://prettydoc.statr.me/)                                                                                                                    |
+|    7 | Relatórios           | [Instalação LaTeX](https://livro.curso-r.com/1-3-instalacao-adicionais.html#latex)                                                                                 |
+|    7 | Relatórios           | [Escala de cores: Viridis](https://ggplot2.tidyverse.org/reference/scale_viridis.html)                                                                             |
+|    7 | Relatórios           | [Pacote Geobr](https://ipeagit.github.io/geobr/)                                                                                                                   |
+|    8 | Referências gerais   | [Guia de estilo: Tidyverse](https://style.tidyverse.org/)                                                                                                          |
+|    8 | Referências gerais   | [Livro Zen do R](https://curso-r.github.io/zen-do-r/index.html)                                                                                                    |
+|    8 | Relatórios           | [Exemplo criado durante a aula](https://exemplo-aula-rmd.netlify.app/)                                                                                             |
+|    8 | Relatórios           | [Base de dados usada no exemplo criado durante a aula](https://raw.githubusercontent.com/curso-r/202102-r4ds-1/master/pratica/dados_brasil.csv)                    |
 
 Materiais que comentamos quando tiramos dúvidas (não necessariamente são
 relacionadas com o conteúdo da aula).
@@ -144,6 +162,7 @@ relacionadas com o conteúdo da aula).
 |    2 | Conversa/Dúvidas | [(Importação de PDFs) Post {tabulizer}: Tabela do PDF para data.frame em segundos](https://blog.curso-r.com/posts/2021-01-08-tabulizer/)          |
 |    3 | Conversa/Dúvidas | [API para enviar e-mails](https://sendgrid.com/)                                                                                                  |
 |    6 | Conversa/Dúvidas | [Folha de cola: Regular Expressions](https://cheatography.com//davechild/cheat-sheets/regular-expressions/pdf/)                                   |
+|    7 | Conversa/Dúvidas | [Pacote rticles](https://github.com/rstudio/rticles)                                                                                              |
 
 Dúvidas enviadas e postadas no [Fórum da
 Curso-R](https://discourse.curso-r.com/).
