@@ -1,0 +1,124 @@
+---
+title: "Estados do Brasil"
+date: "15 de março de 2021"
+author: "Beatriz e William"
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+params:
+  estado: "Rio de Janeiro"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+# Carregar o pacote tidyverse
+library(tidyverse)
+library(knitr)
+# Carregar a base de dados
+dados_brasil <- read_csv2("https://raw.githubusercontent.com/curso-r/202102-r4ds-1/master/pratica/dados_brasil.csv")
+
+```
+
+Existem `r nrow(dados_brasil)` estados no Brasil.
+
+Fonte dos dados:
+
+-   [IBGE](https://www.ibge.gov.br/cidades-e-estados), no dia 28/02/2021.
+
+```{r echo=FALSE, out.width="30%", fig.align='center', fig.cap="Logo do IBGE"}
+include_graphics("https://www.agenciaconexoes.org/wp-content/uploads/2019/07/ibge.jpg")
+```
+
+# População
+
+```{r include=FALSE}
+estado_maior_pop <- dados_brasil %>% 
+  select(uf, populacao_estimada) %>% 
+  arrange(desc(populacao_estimada)) %>% 
+  slice(1)
+
+nome_estado_maior_pop <- estado_maior_pop %>%
+  pull(uf) 
+
+numero_estado_maior_pop <-  estado_maior_pop %>%
+  mutate(populacao_estimada_milhoes = round(populacao_estimada / 1000000, 1)) %>%
+  pull(populacao_estimada_milhoes)
+```
+
+O estado com maior população estimada é **`r nome_estado_maior_pop`**, com `r numero_estado_maior_pop` milhões de habitantes.
+
+## Regiões do Brasil
+
+```{r include=FALSE}
+dados_brasil_regiao <- dados_brasil %>%
+  mutate(
+    regiao = case_when(
+      uf %in% c("São Paulo", "Rio de Janeiro",
+                "Minas Gerais", "Espírito Santo") ~ "Sudeste",
+      
+      
+      uf %in% c(
+        "Acre",
+        "Amapá",
+        "Amazonas",
+        "Pará",
+        "Rondônia",
+        "Roraima",
+        "Tocantins"
+      ) ~ "Norte",
+      
+      
+      uf %in% c(
+        "Alagoas",
+        "Bahia",
+        "Ceará",
+        "Paraíba",
+        "Pernambuco",
+        "Pernambuco",
+        "Piauí",
+        "Sergipe",
+        "Rio Grande do Norte",
+        "Maranhão"
+      ) ~ "Nordeste",
+      
+      uf %in% c("Paraná", "Rio Grande do Sul",
+                "Santa Catarina") ~ "Sul",
+      
+      
+      uf %in% c("Goiás", "Mato Grosso do Sul",
+                "Mato Grosso",
+                "Distrito Federal") ~ "Centro-Oeste"
+    )
+  ) %>%
+  relocate(regiao, .after = uf)
+```
+
+```{r echo=FALSE}
+dados_brasil_regiao %>% 
+  group_by(regiao) %>% 
+  summarise(qnt_estados = n(),
+            area_total = sum(area_territorial)
+            ) %>% 
+  knitr::kable(col.names = c("Região", "Quantidade de Estados", "Área total"))
+```
+
+```{r dpi=300}
+dados_brasil_regiao %>%
+  mutate(populacao_estimada_milhoes = populacao_estimada / 1000000,
+         uf = forcats::fct_reorder(uf, populacao_estimada_milhoes)) %>%
+  ggplot() +
+  geom_col(aes(y = uf, x = populacao_estimada_milhoes, fill = regiao),
+           show.legend = FALSE) +
+  facet_wrap( ~ regiao, scales = "free") +
+  labs(y = "Estado", x = "População estimada (em milhões) ") +
+  theme_bw() 
+```
+
+
+```{r eval=FALSE, include=FALSE}
+## Resumo do estado `r params$estado`
+```
+

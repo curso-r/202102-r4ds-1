@@ -9,6 +9,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## O que é o R Markdown?
 
+### titulo de terceira ordem
+#### titulo de quarta ordem
 O R Markdown é uma ferramenta para criação de relatórios automatizados utilizando as linguagem R e Markdown. 
 
 A linguagem de marcação Markdown serve para construirmos e formatarmos diversos formatos de arquivos (PDF, HTML, Word, entre outros) a partir de um arquivo de texto com regras bem simples. O R Markdown é uma extensão de Markdown que nos permite colocar código de R.
@@ -47,6 +49,7 @@ A seguir, apresentamos uma lista dos principais marcadores utilizados para forma
 ## Chunks: escrevendo nosso código de R
 
 Em um arquivo R Markdown, precisamos escrever nossos códigos dentro dos *chunks*. Para inserir um chunk, utilize o atalho `CTRL + ALT + I`.
+
 
 Dentro dos chunks você poderá escrever códigos em R como se fosse o nosso script .R tradicional. Por padrão, o código dentro do chunk será colocado no relatório, assim como o resultado da execução desse código (i.e., tudo que seria). Veja o exemplo abaixo:
 
@@ -90,10 +93,20 @@ Para saber mais sobre os parâmetros dos chunks, consulte [este guia](https://ww
 
 Você pode carregar pacotes e dados normalmente dentro de um script R Markdown.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(tidyverse)
 
 imdb <- read_rds("../dados/imdb.rds")
+
+# Subir um nível de diretório
+# "../"
+
+# Subir dois níveis de diretório
+# "../../"
+
+# opcao com o pacote here
+
+# imdb <- read_rds(here::here("dados", "imdb.rds"))
 ```
 
 Veja que as mensagens e warnings dos nossos códigos também são colocadas no relatório. Para evitar isso, basta usarmos os parâmetros `message=FALSE` e `warning=FALSE`.
@@ -116,7 +129,7 @@ imdb %>%
     lucro = scales::dollar(lucro)
   ) %>% 
   select(`Posição` = pos, Filme = titulo, Lucro = lucro) %>% 
-  knitr::kable()
+   knitr::kable()
 ```
 
 
@@ -124,7 +137,7 @@ imdb %>%
 
 Para construir gráficos, não há segredos. O mesmo gráfico que apareceria na aba **Plots** do RStudio aparecerá no relatório.
 
-```{r, fig.align = "center", warning = FALSE, fig.cap="Figura 1. Nota média ao longo dos anos."}
+```{r, fig.align = "center", warning = FALSE, fig.cap="Figura 1. Nota média ao longo dos anos.", out.width="100%" }
 imdb %>% 
   group_by(ano) %>% 
   summarise(nota_media = mean(nota_imdb, na.rm = TRUE)) %>% 
