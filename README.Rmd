@@ -37,6 +37,18 @@ Fora do horário de aula ou monitoria:
 
 - perguntas sobre R, principalmente as que envolverem código, deverão ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
 
+## Trabalhos finais premiados
+
+```{r}
+pasta <- "trabalhos_premiados/"
+knitr::kable(
+  tibble::tibble(
+    script = list.files(pasta, pattern = ".html"),
+    link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
+  ) 
+)
+```
+
 ## Slides
 
 ```{r}

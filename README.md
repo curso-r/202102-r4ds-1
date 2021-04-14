@@ -23,6 +23,14 @@ Fora do horário de aula ou monitoria:
 -   perguntas sobre R, principalmente as que envolverem código, deverão
     ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
 
+## Trabalhos finais premiados
+
+| script                           | link                                                                                         |
+|:---------------------------------|:---------------------------------------------------------------------------------------------|
+| Flavia\_Oliveira.html            | <https://curso-r.github.io/202102-r4ds-1/trabalhos_premiados/Flavia_Oliveira.html>           |
+| Guilherme\_Bride\_Fernandes.html | <https://curso-r.github.io/202102-r4ds-1/trabalhos_premiados/Guilherme_Bride_Fernandes.html> |
+| Saulo\_Gil.html                  | <https://curso-r.github.io/202102-r4ds-1/trabalhos_premiados/Saulo_Gil.html>                 |
+
 ## Slides
 
 | slide                              | link                                                                       |
